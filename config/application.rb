@@ -22,5 +22,6 @@ module TrailMaster
   end
 end
 
+require 'carrierwave'
 require 'carrierwave/orm/activerecord'
 require 'json'
