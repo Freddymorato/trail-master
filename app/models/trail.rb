@@ -7,7 +7,6 @@ class Trail < ApplicationRecord
   mount_uploader :image, ImageUploader
   validate :image_size_validation
 
-
   def self.search(search)
     where("duration LIKE ? ", "#{search}")
   end
