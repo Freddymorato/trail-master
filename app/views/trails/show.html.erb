@@ -8,11 +8,11 @@
     <p class="item1">Country:&nbsp;&nbsp;&nbsp;<%= @trail.country.name %></p><br>
     <p class="item1">Distance:&nbsp;&nbsp;&nbsp;<%= @trail.distance %> miles</p><br>
     <p class="item1">Duration:&nbsp;&nbsp;&nbsp;<%= @trail.duration %> hours</p><br>
-    <p class="item1">Difficulty:&nbsp;&nbsp;&nbsp;<%= @trail.difficulty %> / 5<p/><br><br><br><br><br><br><br><br><br>
-    <% if current_user.trails.include?(@trail) %>
+    <p class="item1">Difficulty:&nbsp;&nbsp;&nbsp;<%= @trail.difficulty %> / 5<p/>
+    <p id="trail-links"><% if current_user.trails.include?(@trail) %>
       <%= link_to "Edit Trail", edit_user_trail_path(current_user, @trail), class: "edit-link" %>&nbsp;&nbsp;&nbsp;
       <%= link_to "Delete Trail", user_trail_path(current_user, @trail), :confirm => "Are you sure?", :method => :delete, class: "delete-link"%>
-    <% end %>
+    <% end %></p>
   </div>
 
   <div class="box-div">

@@ -11382,3 +11382,348 @@ Processing by UsersController#create as HTML
 Completed 200 OK in 379ms (Views: 292.1ms | ActiveRecord: 0.6ms)
 
 
+Started GET "/login" for ::1 at 2018-07-31 16:15:08 -0400
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (10.6ms)
+Completed 200 OK in 1745ms (Views: 1716.2ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/login" for ::1 at 2018-07-31 16:15:13 -0400
+Processing by SessionsController#new as HTML
+  Rendering sessions/new.html.erb within layouts/application
+  Rendered sessions/new.html.erb within layouts/application (2.5ms)
+Completed 200 OK in 449ms (Views: 445.9ms | ActiveRecord: 0.0ms)
+
+
+Started POST "/login" for ::1 at 2018-07-31 16:15:16 -0400
+Processing by SessionsController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"Hu1IG/9P7zNWVisZICGWGXdzRIkUTa44puWx6/3dxcf5tclyY7oJw8kexS+IGW2ZrE/FRcloNSVq0ZoPjiSqKg==", "user"=>{"email"=>"bob@101.com", "password"=>"[FILTERED]"}, "commit"=>"Sign In"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."email" = ? LIMIT ?[0m  [["email", "bob@101.com"], ["LIMIT", 1]]
+  ↳ app/controllers/sessions_controller.rb:8
+Redirected to http://localhost:3000/
+Completed 302 Found in 87ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/" for ::1 at 2018-07-31 16:15:16 -0400
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTrail Load (1.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails" ORDER BY created_at asc[0m
+  ↳ app/views/home/_root.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.8ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCACHE Country Load (0.0ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 153], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.6ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 159], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCACHE Country Load (0.0ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 97], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 158], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 156], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  Rendered home/_root.html.erb (69.6ms)
+  Rendered home/index.html.erb within layouts/application (72.9ms)
+Completed 200 OK in 345ms (Views: 325.6ms | ActiveRecord: 6.6ms)
+
+
+Started GET "/trails/12" for ::1 at 2018-07-31 16:15:22 -0400
+Processing by TrailsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:12
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mTrail Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 12], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (27.2ms)
+Completed 200 OK in 299ms (Views: 290.8ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trails/12" for ::1 at 2018-07-31 16:17:25 -0400
+Processing by TrailsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTrail Load (1.5ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mCACHE Trail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:12
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mTrail Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 12], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (32.3ms)
+Completed 200 OK in 698ms (Views: 651.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/trails/12" for ::1 at 2018-07-31 16:17:58 -0400
+Processing by TrailsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:12
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mTrail Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 12], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (6.1ms)
+Completed 200 OK in 9763ms (Views: 9757.0ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/trails/12" for ::1 at 2018-07-31 16:19:06 -0400
+Processing by TrailsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTrail Load (1.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:12
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mTrail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 12], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (28.9ms)
+Completed 200 OK in 10082ms (Views: 10056.4ms | ActiveRecord: 1.9ms)
+
+
+Started GET "/trails/12" for ::1 at 2018-07-31 16:21:47 -0400
+Processing by TrailsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTrail Load (3.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mCACHE Trail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:12
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mTrail Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 12], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (32.6ms)
+Completed 200 OK in 9376ms (Views: 9346.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/trails/12" for ::1 at 2018-07-31 16:22:03 -0400
+Processing by TrailsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:12
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mTrail Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 12], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (7.8ms)
+Completed 200 OK in 481ms (Views: 473.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/trails/12" for ::1 at 2018-07-31 16:22:22 -0400
+Processing by TrailsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTrail Load (1.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:12
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (1.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mTrail Exists (1.0ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 12], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (36.6ms)
+Completed 200 OK in 17386ms (Views: 17367.0ms | ActiveRecord: 4.5ms)
+
+
+Started GET "/trails/12" for ::1 at 2018-07-31 16:22:49 -0400
+Processing by TrailsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTrail Load (0.7ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:12
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mTrail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 12], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (9.6ms)
+Completed 200 OK in 11141ms (Views: 11134.2ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/trails/12" for ::1 at 2018-07-31 16:23:15 -0400
+Processing by TrailsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:12
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mTrail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 12], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (6.9ms)
+Completed 200 OK in 9971ms (Views: 9965.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trails/12" for ::1 at 2018-07-31 16:23:34 -0400
+Processing by TrailsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:12
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mTrail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 12], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 9154ms (Views: 9149.0ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/trails/12" for ::1 at 2018-07-31 16:23:52 -0400
+Processing by TrailsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTrail Load (0.4ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:12
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mTrail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 12], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (60.7ms)
+Completed 200 OK in 9256ms (Views: 9248.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/trails/12" for ::1 at 2018-07-31 16:24:19 -0400
+Processing by TrailsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:12
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mTrail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 12], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (8.9ms)
+Completed 200 OK in 9890ms (Views: 9883.8ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/trails/12" for ::1 at 2018-07-31 16:24:44 -0400
+Processing by TrailsController#show as HTML
+  Parameters: {"id"=>"12"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 12], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:12
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mTrail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 12], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (10.2ms)
+Completed 200 OK in 9517ms (Views: 9512.2ms | ActiveRecord: 1.0ms)
+
+
