@@ -1,24 +1,56 @@
-# rails-trail-master
+# Trail Master
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+Welcome to Trail Master!
 
-Things you may want to cover:
+## Getting Started
 
-* Ruby version
+```Fork and clone this repo```
 
-* System dependencies
+### Enabling OmniAuth for FB login
 
-* Configuration
+```Follow instructions in .env template```
 
-* Database creation
+### Prerequisites
+To install all necessary gems, run
 
-* Database initialization
+```bundle install```
 
-* How to run the test suite
+To set up database and add seed data, run
 
-* Services (job queues, cache servers, search engines, etc.)
+```rails db:migrate```
 
-* Deployment instructions
+then
 
-* ...
+```rails db:seed```
+
+### Deploy the program on a local server
+
+To deploy the program in the browser, run
+
+```rails s```
+
+Navigate to ```https://localserver:3000/``` to get started.
+
+
+## Built With
+
+* [Ruby on Rails](http://rubyonrails.org) - Web framework
+* [OmniAuth](https://github.com/omniauth/omniauth) - Third-party log in
+* [CarrierWave](https://github.com/carrierwaveuploader/carrierwave) - Image uploading/storage
+
+## Contributing
+
+Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
+
+
+## Authors
+
+* **Frederico Morato** - [Frederico Morato @ github](https://github.com/Freddymorato)
+
+## License
+
+This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md) file for details
+
+## Acknowledgments
+
+* This project was built for Flatiron School's Full-Stack Web Development course.
