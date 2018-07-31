@@ -21,17 +21,16 @@
       </a>
 
       <% if @user.errors.any? %>
-        <div id="error_explanation">
-          <h2> Sign Up Failed </h2>
+        <div class="alert alert-danger" role="alert">
+          <p> Sign Up Failed: </p>
           <ul>
             <% @user.errors.full_messages.each do |msg| %>
               <li><%= msg %></li>
               <% end %>
             </ul>
           </div>
-        <% end %>
-      </div>
-
+       <% end %>
+    </div>
 
     <div class="box-div">
     </div>
