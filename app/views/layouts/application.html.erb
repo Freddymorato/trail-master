@@ -1,15 +1,107 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
-    <title>TrailMaster</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+      <meta name="description" content="World's Most Dangerous Trails">
+      <meta name="Frederico Morato" content="Trail Master">
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
+      <title>Trail Master</title>
 
-  <body>
-    <%= yield %>
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+      <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+      <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    </head>
+    <body>
+
+      <div id="wrapper">
+          <!-- Sidebar -->
+          <div id="sidebar-wrapper">
+
+            <ul class="sidebar-nav">
+              <li class="sidebar-brand">
+                <%= link_to "Home", root_path %>
+              </li>
+              <li>
+                <% if logged_in? %><%= link_to "Submit a trail", new_user_trail_path(current_user, @trail = Trail.new) %><% end %>
+              </li>
+              <li>
+                <%= link_to "Trails by country", countries_path %>
+              </li>
+              <li>
+                <p class="search-p">Trails by duration</p>
+                <%= form_tag('/trails_by_time', :method => "get", id: "search-form") do %>
+                    <%= number_field_tag :search, params[:search], placeholder: " whole hours", class: "search-input" %>
+                    <%= submit_tag "Search", class: "btn-sm", :name => nil %>
+                <% end %>
+              </li>
+              <li>
+                <p class="search-p">Trails by distance</p>
+                <%= form_tag('/trails_by_distance', :method => "get", id: "search-form") do %>
+                    <%= number_field_tag :search, params[:search], placeholder: " whole miles", class: "search-input" %>
+                    <%= submit_tag "Search", class: "btn-sm", :name => nil %>
+                <% end %>
+              </li>
+              <li>
+                <p class="search-p">Trails by difficulty</p>
+                <%= form_tag('/trails_by_difficulty', :method => "get", id: "search-form") do %>
+                    <%= number_field_tag :search, params[:search], placeholder: " 1 to 5", class: "search-input" %>
+                    <%= submit_tag "Search", class: "btn-sm", :name => nil %>
+                <% end %>
+              </li>
+            </ul>
+          </div>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <div class="container-fluid">
+
+              <div id="logo">
+                <div id="mountain"><%= image_tag('mountain.png', alt: 'logo', class: 'img-fluid') %></div>
+                <h1>Trail Master</h1>
+              </div>
+
+              <div id="divider">
+                &copy; Copyright 2018 - Frederico Morato - Flatiron School
+              </div>
+
+              <% if logged_in? %>
+                <a href="#menu-toggle" class="btn btn-secondary" id="menu-toggle"><%= icon('fas', 'bars') %></a>
+                <a class="btn btn-secondary" <%= link_to "Log Out", logout_path(current_user) %></a>&nbsp;&nbsp;<span>Logged in as: <%= current_user.name  %></span>
+              <% else %>
+                <a class="btn btn-secondary" <%= link_to "Home", login_path %></a>
+              <% end %>
+
+              <% if flash[:notice] %>
+                <div class="alert alert-danger" role="alert"><%= flash[:notice] %></div>
+              <% end %>
+
+              <% if flash[:msg] %>
+                <div class="alert alert-success" role="alert"><%= flash[:msg] %></div>
+              <% end %>
+
+              <div class="content">
+                <%= yield %>
+              </div>
+
+              <div id="moon">
+                <%= image_tag('moon.png', alt: 'moon', class: 'img-fluid') %>
+              </div>
+
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+      </div>
+      <!-- /#wrapper -->
+
+      <!-- Menu Toggle Script -->
+      <script>
+        $("#menu-toggle").click(function(e) {
+          e.preventDefault();
+          $("#wrapper").toggleClass("toggled");
+        });
+      </script>
   </body>
 </html>
