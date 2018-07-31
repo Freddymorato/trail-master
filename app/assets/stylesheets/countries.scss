@@ -1,0 +1,24 @@
+// Place all the styles related to the countries controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*---- country content ----*/
+
+
+.col-md-4.col-sm-6.col-xs-12-3 {
+  width: 25%;
+  display: inline-grid;
+  margin: 0 0 2% 2%;
+  background-color: #EDEDED;
+  padding: .5rem 0 .5rem 2rem;
+  border: .1rem solid #7D9387;
+}
+
+#countries {
+  width: 75%;
+  margin: 0 auto 0 auto;
+  background-color: #EDEDED;
+  padding: 2.5rem;
+  box-shadow: 1.5px 2px #A5B4AC;
+}
