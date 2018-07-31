@@ -1,0 +1,42 @@
+
+
+
+<h4>Please sign up to gain further access:</h4><br><br>
+
+<div class="row row-flex-2">
+  <div class="col-md-4 col-sm-6 col-xs-12-A">
+    <div class='form-container'>
+      <%= form_for @user do |f| %>
+        <%= f.text_field :name, placeholder: "Name" %><br><br>
+        <%= f.email_field :email, placeholder: "Email" %><br><br>
+        <%= f.password_field :password, placeholder: "Password (8 char min)" %><br><br>
+        <%= f.submit "Sign me up!" %>
+        <% end %>
+      </div><br>
+
+      <p>- Or -</p>
+
+      <a class="btn btn-block btn-social btn-facebook" href="/auth/facebook">
+        <%= icon('fab', 'facebook-f') %>Login via Facebook
+      </a>
+
+      <% if @user.errors.any? %>
+        <div id="error_explanation">
+          <h2> Sign Up Failed </h2>
+          <ul>
+            <% @user.errors.full_messages.each do |msg| %>
+              <li><%= msg %></li>
+              <% end %>
+            </ul>
+          </div>
+        <% end %>
+      </div>
+
+
+    <div class="box-div">
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-xs-12-B">
+      <%= image_tag('trail.png', alt: 'trail', class: 'img-fluid') %>
+    </div>
+</div>
