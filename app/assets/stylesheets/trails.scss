@@ -1,0 +1,53 @@
+// Place all the styles related to the trails controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+/*---- trails content ----*/
+
+#trail-form {
+  width: 75%;
+  margin: 0 auto 0 auto;
+  background-color: #EDEDED;
+  padding: 2.5rem;
+  box-shadow: 1.5px 2px #A5B4AC;
+}
+
+textarea {
+  width: 50%;
+  height: 100px;
+}
+
+.edit-link {
+  padding: .37rem;
+  border: 1px dashed #7D9387;
+}
+
+.delete-link {
+  padding: .37rem;
+  border: 1px dashed #7D9387;
+}
+
+.item1 {
+  border-bottom: 1px dashed #7D9387
+}
+
+.col-md-4.col-sm-6.col-xs-12-A-1 {
+  background-color: #EDEDED;
+  margin-left: auto;
+  padding: 1.2rem;
+}
+
+.col-md-4.col-sm-6.col-xs-12-B-1 {
+  background-color: #EDEDED;
+  margin-right: auto;
+  padding: 1.2rem;
+}
+
+.row-flex-1 {
+  display: flex;
+  flex-wrap: wrap;
+  border-bottom: 1px solid #2c2c2d;
+  border-top: 1px solid #2c2c2d;
+  padding: .6rem;
+}
