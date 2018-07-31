@@ -1,0 +1,35 @@
+
+
+
+<div class="row row-flex-1">
+  <div id="trail-form">
+    <%= form_for [current_user, trail] do |f| %>
+
+        <%= f.label "Name:" %><br>
+        <%= f.text_field :name %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <%= f.label "Country:" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <%= f.collection_select(:country_id, Country.all.order('name ASC'), :id, :name ) %><br><br>
+        <%= f.label "Distance:" %><br>
+        <%= f.number_field :distance, placeholder: "  whole miles" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+
+        <%= f.label "Image:" %>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <%= f.file_field :image %>
+        <% if f.object.image? %>
+          <%= image_tag f.object.image.url %>
+          <%= f.label :remove_image %>
+          <%= f.check_box :remove_image %>
+        <% end %><br><br>
+
+        <%= f.label "Duration:" %><br>
+        <%= f.number_field :duration, placeholder: "  whole hours"%><br><br>
+        <%= f.label "Difficulty:" %><br>
+        <%= f.number_field :difficulty, placeholder: "  1 to 5" %><br><br>
+        <%= f.label "Dangers:" %><br>
+        <%= f.text_area :dangers, placeholder: "  e.g. Bridges that swing while crossing, or dangerous wildlife." %><br><br>
+
+        <%= f.hidden_field :user_id, :value => current_user.id%>
+
+        <%= f.submit "Create Trail", class:"submit" %>
+    <% end %>
+  </div>
+</div>
