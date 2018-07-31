@@ -8,7 +8,6 @@ Rails.application.routes.draw do
 
   resources :countries, only: [:index, :show]
 
-  resources :trails, only: [:show]
 
   get '/login' => 'sessions#new'
   post '/login' => 'sessions#create'

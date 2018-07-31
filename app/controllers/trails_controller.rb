@@ -9,8 +9,6 @@ class TrailsController < ApplicationController
   end
 
   def show
-    @trail = Trail.find(params[:id])
-    @countries = Country.all
   end
 
   def create

@@ -1,6 +1,6 @@
 # Trail Master
 
-Welcome to Trail Master!
+Welcome to Trail Master! This web app allows users to share information about dangerous hiking trails.
 
 ## Getting Started
 
