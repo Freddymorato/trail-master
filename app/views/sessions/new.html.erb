@@ -1,0 +1,59 @@
+
+
+
+<div class="row row-flex-2">
+  <div class="col-md-4 col-sm-6 col-xs-12-A">
+    <h6>SPECTACULAR VIEWS IN DANGEROUS PLACES:</h6>
+
+    <p>The two are often linked together: spectacular views and dangerous places.
+      Lots of hiking enthusiasts go to remote locations, rough terrain and overcome major challenges.
+      To get there sometimes takes a lot of courage to face the dangerous man-made hiking trails.
+      These trails are not meant for the beginner hiker and definitely not for those for the feint of heart.</p>
+
+      The dangers that we’re speaking of are:
+
+      <ul>
+        <li>Wooden planks suspended thousands of feet in the air</li>
+        <li>Chains hanging from the side of a cliff</li>
+        <li>Narrow steps the width of one foot width</li>
+        <li>Bridges that swing while crossing</li>
+        <li>Wooden Ladders that are miles high with squeaky nails</li>
+        <li>Locations that are filled with dangerous wildlife</li>
+      </ul>
+  </div>
+
+  <div class="box-div">
+  </div>
+
+  <div class="col-md-4 col-sm-6 col-xs-12-B">
+    <p>Please sign in or sign up to continue:</p><br>
+
+    <div class='signin-form-container'>
+      <%= form_for @user, url: login_path(@user), method: :post do |f|%>
+        <%= f.email_field :email, placeholder: "Email" %><br><br>
+        <%= f.password_field :password, placeholder: "Password" %><br><br>
+        <%= f.submit "Sign In" %>
+        <% end %>
+        <br>
+    </div>
+
+    <%= link_to "Sign Up", new_user_path, class:'signup' %>
+    <br><br>
+    <p>- Or -</p>
+
+    <a class="btn btn-block btn-social btn-facebook" href="/auth/facebook">
+      <%= icon('fab', 'facebook-f') %>Login via Facebook
+    </a>
+
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2> Sign In Failed </h2>
+        <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+            <% end %>
+          </ul>
+        </div>
+      <% end %>
+    </div>
+</div>
