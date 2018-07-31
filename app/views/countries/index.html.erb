@@ -1,0 +1,14 @@
+
+
+
+<h4>Trails from around the world</h4><br><br>
+
+<div id="countries">
+  <p>Select a country to view trails in that region:</p><br>
+  <% @countries.each do |c| %>
+    <div class="col-md-4 col-sm-6 col-xs-12-3">
+      <%= flag_icon(c.flag) %>
+      <%= link_to c.name, country_path(c) %>
+    </div>
+  <% end %>
+</div>

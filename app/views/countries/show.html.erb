@@ -1,0 +1,24 @@
+
+
+
+<h4>Trails in <%= @country.name %></h4><br><br>
+
+<% @country.trails.each do |t| %>
+<div class='trail-card'>
+  <div class="row row-flex-2">
+    <div class="col-md-4 col-sm-6 col-xs-12-A">
+      <%= image_tag t.image.url, class:'img-fluid' %><br><br>
+      <small class='user-link'>User: <%= link_to t.user.name, user_path(t.user) %></small>
+    </div>
+
+    <div class="box-div">
+    </div>
+
+    <div class="col-md-4 col-sm-6 col-xs-12-B">
+      <h6><%= link_to t.name, trail_path(t), class:'name' %></h6><br><br>
+      <%= flag_icon(t.country.flag) %><br><br>
+      <p class="card-1">Difficulty:&nbsp;&nbsp;&nbsp;<%= t.difficulty %> / 5</p>
+    </div>
+    </div>
+  </div>
+<% end %>
