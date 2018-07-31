@@ -1,0 +1,26 @@
+// Place all the styles related to the sessions controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+
+
+.signin-form-container {
+  background-color: none;
+}
+
+form.new_user {
+  margin-bottom: .8%;
+}
+
+.signup {
+  color: #3B5998;
+  text-decoration: underline;
+}
+
+.row-flex-2 {
+  display: flex;
+  flex-wrap: wrap;
+  background-color: none;
+  border-bottom: 1px solid #2c2c2d;
+  border-top: 1px solid #2c2c2d;
+  padding: .6rem;
+}
