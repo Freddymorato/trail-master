@@ -15,7 +15,7 @@
       </div>
 
       <div class="col-md-4 col-sm-6 col-xs-12-B">
-        <h6><%= link_to trail.name, trail_path(trail), class:'name' %></h6><br><br>
+        <h6><%= link_to trail.name, user_trail_path(current_user, trail), class:'name' %></h6><br><br>
         <%= flag_icon(trail.country.flag) %><br><br>
         <p class="card-1">Distance:&nbsp;&nbsp;&nbsp;<%= trail.distance %> miles</p>
       </div>
