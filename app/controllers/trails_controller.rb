@@ -15,7 +15,7 @@ class TrailsController < ApplicationController
     @trail = Trail.new(trail_params)
     if @trail.save
       flash[:msg] = "Trail successfully created."
-      redirect_to trail_path(@trail)
+      redirect_to '/'
     else
       render :new
     end
