@@ -18,6 +18,8 @@ gem 'sass-rails', '~> 5.0'
 gem 'json'
 
 
+gem 'active_model_serializers', '0.10.6'
+
 gem 'bootstrap'
 gem 'jquery-rails'
 
