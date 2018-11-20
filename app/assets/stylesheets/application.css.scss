@@ -302,3 +302,63 @@ a.btn.btn-primary.btn-sm {
 .alert.alert-success {
   display: inherit;
 }
+
+#outter-section {
+  margin-top: 2%;
+  padding: 1% 2% 1% 2%;
+  background-color: #D6DDD9;
+  font-size: .8rem;
+  border-bottom: 1px solid #2c2c2d;
+}
+
+#com-section {
+  margin: 1% 0 1% 0;
+  padding: 1%;
+  border: 1px dashed #7D9387;
+}
+
+.comment-wrapper {
+  padding: 2%;
+  background-color: #EDEDED;
+  margin-bottom: 1%;
+}
+
+.comment-wrapper:hover {
+  background-color: #FFFFFF;
+  border-color: #7D9387;
+  border-width: 1px;
+}
+
+.comment-wrapper:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+button {
+  background-color: #7D9387;
+  color: #FFFFFF;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  transition-duration: 0.15s;
+  margin-right: .7%;
+}
+
+button:hover {
+  background-color: #FFFFFF;
+  color: black;
+  border-color: #7D9387;
+  border-width: 1px;
+}
+
+button:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
+p button {
+  font-size: 0.375rem;
+  background-color: #6c757d;
+  margin-top: 1%;
+}
+
+p button:hover {
+  border-color: #6c757d;
+}
