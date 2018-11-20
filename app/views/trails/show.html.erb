@@ -9,19 +9,37 @@
     <p class="item1">Distance:&nbsp;&nbsp;&nbsp;<%= @trail.distance %> miles</p><br>
     <p class="item1">Duration:&nbsp;&nbsp;&nbsp;<%= @trail.duration %> hours</p><br>
     <p class="item1">Difficulty:&nbsp;&nbsp;&nbsp;<%= @trail.difficulty %> / 5<p/>
-    <p id="trail-links"><% if current_user.trails.include?(@trail) %>
-      <%= link_to "Edit Trail", edit_user_trail_path(current_user, @trail), class: "edit-link" %>&nbsp;&nbsp;&nbsp;
-      <%= link_to "Delete Trail", user_trail_path(current_user, @trail), :confirm => "Are you sure?", :method => :delete, class: "delete-link"%>
-    <% end %></p>
+    <div id="trail-links"><% if current_user.trails.include?(@trail) %>
+      <%= link_to "Edit Trail", edit_user_trail_path(current_user, @trail), class: "btn btn-secondary btn-sm" %>&nbsp;&nbsp;&nbsp;
+      <%= link_to "Delete Trail", user_trail_path(current_user, @trail), :confirm => "Are you sure?", :method => :delete, class: "btn btn-secondary btn-sm" %>
+    <% end %></div>
   </div>
 
   <div class="box-div">
   </div>
 
   <div class="col-md-4 col-sm-6 col-xs-12-B-1">
-    <%= image_tag @trail.image.url, class: 'img-fluid' %>
+    <% if @trail.image.url %><%= image_tag @trail.image.url, class: 'img-fluid' %><% end %>
     <br><br>
     <%= @trail.dangers %><br><br><br><br>
     <small class='user-link'>User: <%= link_to @trail.user.name,  user_path(@trail.user) %></small>
+  </div>
+</div>
+
+
+
+<div id="outter-section">
+  <p id="comment-p">Leave this trail a comment:</p>
+  <%= form_for([@user, @trail, @comment]) do |f| %>
+    <%= f.text_area :content, rows:3 %><br><br>
+    <%= f.submit 'Create Comment', class: 'comment-bttn' %>
+  <% end %><br><br>
+
+  <button id="comment_list">View Comments</button>
+  <button id="my_comments">My Comments</button>
+
+
+  <div id="com-section">
+    <!-- show comments here -->
   </div>
 </div>
