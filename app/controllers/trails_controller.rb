@@ -9,6 +9,8 @@ class TrailsController < ApplicationController
   end
 
   def show
+    @user = current_user
+    @comment = Comment.new
   end
 
   def create
