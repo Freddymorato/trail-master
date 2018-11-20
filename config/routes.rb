@@ -2,8 +2,10 @@ Rails.application.routes.draw do
 
   root "home#index"
 
-  resources :users, only: [:new, :create, :show] do
-    resources :trails
+  resources :users do
+    resources :trails do
+      resources :comments
+    end
   end
 
   resources :countries, only: [:index, :show]
