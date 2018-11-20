@@ -19,8 +19,8 @@
         <%= flag_icon(trail.country.flag) %><br><br>
         <p class="card-1">Difficulty:&nbsp;&nbsp;&nbsp;<%= trail.difficulty %> / 5</p><br><br>
         <% if current_user.trails.include?(trail) %>
-          <%= link_to "Edit Trail", edit_user_trail_path(current_user, trail), class: "edit-link" %>&nbsp;&nbsp;&nbsp;
-          <%= link_to "Delete Trail", user_trail_path(current_user, trail), :confirm => "Are you sure?", :method => :delete, class: "delete-link"%>
+          <%= link_to "Edit Trail", edit_user_trail_path(current_user, trail), class: "btn btn-secondary btn-sm" %>&nbsp;&nbsp;&nbsp;
+          <%= link_to "Delete Trail", user_trail_path(current_user, trail), :confirm => "Are you sure?", :method => :delete, class: "btn btn-secondary btn-sm" %>
         <% end %>
       </div>
     </div>
