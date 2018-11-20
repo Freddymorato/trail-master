@@ -1,6 +1,8 @@
 class Trail < ApplicationRecord
   belongs_to :user
   belongs_to :country
+  has_many :comments
+  accepts_nested_attributes_for :comments
 
   validates_presence_of :name, :image, :distance, :duration, :dangers, :difficulty, :user_id, :country_id
 
