@@ -18,18 +18,61 @@ textarea {
   height: 100px;
 }
 
+textarea#comment_content {
+  width: 100%;
+}
+
+#name-tag {
+  font-size: .9rem;
+  border-bottom: 1px dashed #7D9387;
+}
+
+#new_comment {
+  margin: 1% 0 1% 0;
+  padding: 1%;
+  border: 1px dashed #7D9387;
+}
+
+#comment-p {
+  font-size: .9rem;
+}
+
+.comment-bttn {
+  background-color: #7D9387;
+  color: #FFFFFF;
+  border-radius: 0.25rem;
+  border: 1px solid transparent;
+  transition-duration: 0.15s;
+  margin-right: .7%
+}
+
+.comment-bttn:hover {
+  background-color: #FFFFFF;
+  color: black;
+  border-color: #7D9387;
+  border-width: 1px;
+}
+
+.comment-bttn:not(:disabled):not(.disabled) {
+  cursor: pointer;
+}
+
 #trail-links {
-  margin-top: 40%;
+  position: absolute;
+  bottom: 19px;
 }
 
-.edit-link {
-  padding: .37rem;
-  border: 1px dashed #7D9387;
+.btn.btn-secondary.btn-sm {
+  background-color: #6c757d;
+  border: 1px solid transparent;
+  transition-duration: 0.15s;
 }
 
-.delete-link {
-  padding: .37rem;
-  border: 1px dashed #7D9387;
+.btn.btn-secondary.btn-sm:hover {
+  background-color: #FFFFFF;
+  color: black;
+  border-color: #6c757d;
+  border-width: 1px;
 }
 
 .item1 {
