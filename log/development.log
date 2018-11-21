@@ -22576,3 +22576,1433 @@ Processing by CommentsController#index as JSON
 Completed 200 OK in 55ms (Views: 51.9ms | ActiveRecord: 1.9ms)
 
 
+Started GET "/users/1/trails/1" for ::1 at 2018-11-20 22:52:51 -0500
+Processing by TrailsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (1.3ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.9ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mTrail Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (49.3ms)
+Completed 200 OK in 649ms (Views: 620.4ms | ActiveRecord: 3.7ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-20 22:54:18 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (1.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (23.28ms)
+Completed 200 OK in 29ms (Views: 26.0ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-20 22:54:23 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (38.5ms)
+Completed 200 OK in 42ms (Views: 39.3ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/1/trails/1/comments/8.json" for ::1 at 2018-11-20 22:54:26 -0500
+Processing by CommentsController#show as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1", "id"=>"8"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:36
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers] Rendered CommentSerializer with ActiveModelSerializers::Adapter::Attributes (3.24ms)
+Completed 200 OK in 6ms (Views: 4.3ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-20 22:54:30 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.4ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (53.88ms)
+Completed 200 OK in 58ms (Views: 54.7ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/" for ::1 at 2018-11-21 11:21:37 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTrail Load (1.2ms)[0m  [1m[34mSELECT "trails".* FROM "trails" ORDER BY created_at asc[0m
+  ↳ app/views/home/_root.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.8ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCACHE Country Load (0.0ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 153], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.6ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 159], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCACHE Country Load (0.0ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 97], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 158], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 156], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  Rendered home/_root.html.erb (111.4ms)
+  Rendered home/index.html.erb within layouts/application (116.4ms)
+Completed 200 OK in 4320ms (Views: 4251.8ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/users/1/trails/1" for ::1 at 2018-11-21 11:22:00 -0500
+Processing by TrailsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (0.4ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mTrail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (21.5ms)
+Completed 200 OK in 1294ms (Views: 1268.9ms | ActiveRecord: 2.2ms)
+
+
+Started GET "/users/1/trails/1" for ::1 at 2018-11-21 11:22:09 -0500
+Processing by TrailsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mTrail Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (15.1ms)
+Completed 200 OK in 605ms (Views: 600.3ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:22:13 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (78.58ms)
+Completed 200 OK in 113ms (Views: 110.0ms | ActiveRecord: 2.1ms)
+
+
+Started GET "/users/1/trails/1" for ::1 at 2018-11-21 11:35:05 -0500
+Processing by TrailsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (1.4ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (1.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mTrail Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (52.5ms)
+Completed 200 OK in 1430ms (Views: 1402.1ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/users/1/trails/1" for ::1 at 2018-11-21 11:35:21 -0500
+Processing by TrailsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mTrail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (10.5ms)
+Completed 200 OK in 584ms (Views: 576.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/users/1/trails/1" for ::1 at 2018-11-21 11:35:31 -0500
+Processing by TrailsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (0.5ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mTrail Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (6.0ms)
+Completed 200 OK in 521ms (Views: 514.3ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1/trails/1" for ::1 at 2018-11-21 11:36:10 -0500
+Processing by TrailsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (1.4ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (1.6ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mTrail Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (37.9ms)
+Completed 200 OK in 976ms (Views: 951.0ms | ActiveRecord: 3.6ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:36:14 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (8.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.4ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (48.79ms)
+Completed 200 OK in 66ms (Views: 54.2ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:36:57 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.6ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (72.11ms)
+Completed 200 OK in 84ms (Views: 78.6ms | ActiveRecord: 2.9ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:37:00 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (36.26ms)
+Completed 200 OK in 44ms (Views: 41.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/1/trails/1" for ::1 at 2018-11-21 11:38:03 -0500
+Processing by TrailsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (1.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.7ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mTrail Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (37.3ms)
+Completed 200 OK in 979ms (Views: 955.7ms | ActiveRecord: 2.7ms)
+
+
+Started GET "/users/1/trails/1" for ::1 at 2018-11-21 11:38:22 -0500
+Processing by TrailsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mTrail Exists (0.5ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (10.9ms)
+Completed 200 OK in 608ms (Views: 600.2ms | ActiveRecord: 1.3ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:38:24 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (28.96ms)
+Completed 200 OK in 35ms (Views: 32.8ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1/trails/1" for ::1 at 2018-11-21 11:50:05 -0500
+Processing by TrailsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (1.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.9ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mTrail Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (44.5ms)
+Completed 200 OK in 1972ms (Views: 1945.3ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:50:12 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.9ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (35.67ms)
+Completed 200 OK in 43ms (Views: 39.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/1/trails/1/comments/undefined.json" for ::1 at 2018-11-21 11:50:17 -0500
+Processing by CommentsController#show as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1", "id"=>"undefined"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 0], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:36
+Completed 404 Not Found in 3ms (ActiveRecord: 0.2ms)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Comment with 'id'=undefined):
+  
+app/controllers/comments_controller.rb:36:in `set_comment'
+Started GET "/users/1/trails/1" for ::1 at 2018-11-21 11:50:39 -0500
+Processing by TrailsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (1.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.6ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mTrail Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (36.5ms)
+Completed 200 OK in 905ms (Views: 878.1ms | ActiveRecord: 2.5ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:50:42 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (35.59ms)
+Completed 200 OK in 43ms (Views: 39.9ms | ActiveRecord: 1.6ms)
+
+
+Started GET "/users/1/trails/1/comments/5.json" for ::1 at 2018-11-21 11:50:45 -0500
+Processing by CommentsController#show as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1", "id"=>"5"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:36
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers] Rendered CommentSerializer with ActiveModelSerializers::Adapter::Attributes (6.31ms)
+Completed 200 OK in 9ms (Views: 7.0ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:50:48 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (43.52ms)
+Completed 200 OK in 52ms (Views: 48.4ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/1/trails/1/comments/8.json" for ::1 at 2018-11-21 11:50:49 -0500
+Processing by CommentsController#show as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1", "id"=>"8"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:36
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers] Rendered CommentSerializer with ActiveModelSerializers::Adapter::Attributes (3.52ms)
+Completed 200 OK in 6ms (Views: 4.6ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:50:53 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.4ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (35.21ms)
+Completed 200 OK in 41ms (Views: 38.2ms | ActiveRecord: 1.7ms)
+
+
+Started GET "/users/1/trails/1/comments/8.json" for ::1 at 2018-11-21 11:50:56 -0500
+Processing by CommentsController#show as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1", "id"=>"8"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:36
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers] Rendered CommentSerializer with ActiveModelSerializers::Adapter::Attributes (3.68ms)
+Completed 200 OK in 9ms (Views: 5.1ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:50:58 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (29.85ms)
+Completed 200 OK in 36ms (Views: 32.7ms | ActiveRecord: 1.9ms)
+
+
+Started POST "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:51:10 -0500
+Processing by CommentsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"3VhUU2ixUNMfdPtj4XmIC2x4DjZoPrPxQxoZ8BP4TPLiRSTDImHx4xb9aXCDpycfX7xB3deqT0jI2qXlz9DEXw==", "comment"=>{"content"=>"Amazing!"}, "user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:19
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:19
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:19
+  [1m[36mComment Create (3.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "trail_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Amazing!"], ["user_id", 1], ["trail_id", 1], ["created_at", "2018-11-21 16:51:10.856732"], ["updated_at", "2018-11-21 16:51:10.856732"]]
+  ↳ app/controllers/comments_controller.rb:19
+  [1m[35m (3.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:19
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers] Rendered CommentSerializer with ActiveModelSerializers::Adapter::Attributes (1.27ms)
+Completed 200 OK in 19ms (Views: 2.6ms | ActiveRecord: 7.5ms)
+
+
+Started GET "/users/1/trails/1/comments/9.json" for ::1 at 2018-11-21 11:51:10 -0500
+Processing by CommentsController#show as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1", "id"=>"9"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:36
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers] Rendered CommentSerializer with ActiveModelSerializers::Adapter::Attributes (3.22ms)
+Completed 200 OK in 6ms (Views: 4.4ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:51:23 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.5ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (41.41ms)
+Completed 200 OK in 47ms (Views: 43.8ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/1/trails/1" for ::1 at 2018-11-21 11:54:23 -0500
+Processing by TrailsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (1.6ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:82
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.7ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mTrail Exists (0.8ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (217.7ms)
+Completed 200 OK in 1140ms (Views: 1081.7ms | ActiveRecord: 3.9ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:54:27 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (46.34ms)
+Completed 200 OK in 51ms (Views: 48.5ms | ActiveRecord: 1.5ms)
+
+
+Started GET "/users/1/trails/1/comments/5.json" for ::1 at 2018-11-21 11:54:29 -0500
+Processing by CommentsController#show as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1", "id"=>"5"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 5], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:36
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers] Rendered CommentSerializer with ActiveModelSerializers::Adapter::Attributes (3.28ms)
+Completed 200 OK in 6ms (Views: 4.2ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:54:33 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.6ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (1.4ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (55.7ms)
+Completed 200 OK in 64ms (Views: 58.4ms | ActiveRecord: 4.2ms)
+
+
+Started GET "/users/1/trails/1/comments/9.json" for ::1 at 2018-11-21 11:54:36 -0500
+Processing by CommentsController#show as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1", "id"=>"9"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:36
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers] Rendered CommentSerializer with ActiveModelSerializers::Adapter::Attributes (3.97ms)
+Completed 200 OK in 7ms (Views: 5.1ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:54:39 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.7ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (68.7ms)
+Completed 200 OK in 73ms (Views: 69.3ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:54:40 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.4ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.4ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.7ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (50.25ms)
+Completed 200 OK in 54ms (Views: 50.5ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/users/1/trails/1/comments/8.json" for ::1 at 2018-11-21 11:54:42 -0500
+Processing by CommentsController#show as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1", "id"=>"8"}
+  [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 8], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:36
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers] Rendered CommentSerializer with ActiveModelSerializers::Adapter::Attributes (3.73ms)
+Completed 200 OK in 7ms (Views: 4.8ms | ActiveRecord: 0.4ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:54:43 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.5ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (56.34ms)
+Completed 200 OK in 60ms (Views: 57.1ms | ActiveRecord: 2.3ms)
+
+
+Started GET "/users/1/trails/1/comments/9.json" for ::1 at 2018-11-21 11:54:46 -0500
+Processing by CommentsController#show as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1", "id"=>"9"}
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:36
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers] Rendered CommentSerializer with ActiveModelSerializers::Adapter::Attributes (3.31ms)
+Completed 200 OK in 7ms (Views: 4.4ms | ActiveRecord: 0.5ms)
+
+
+Started DELETE "/users/1/trails/1/comments/9.json" for ::1 at 2018-11-21 11:54:47 -0500
+Processing by CommentsController#destroy as JSON
+  Parameters: {"authenticity_token"=>"yXhbRvULPqTzjzuoJHGo2fiejyh66FX+L4GpqTRnQnD2ZSvWv9uflPoGqbtGrwfNy1rAw8V8qUekQRW86E/K3Q==", "user_id"=>"1", "trail_id"=>"1", "id"=>"9"}
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21
+  [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 9], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:36
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:29
+  [1m[36mComment Destroy (2.5ms)[0m  [1m[31mDELETE FROM "comments" WHERE "comments"."id" = ?[0m  [["id", 9]]
+  ↳ app/controllers/comments_controller.rb:29
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:29
+No template found for CommentsController#destroy, rendering head :no_content
+Completed 204 No Content in 152ms (ActiveRecord: 4.6ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:54:48 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.5ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (50.2ms)
+Completed 200 OK in 55ms (Views: 51.9ms | ActiveRecord: 2.2ms)
+
+
+Started POST "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:54:58 -0500
+Processing by CommentsController#create as JSON
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"yXhbRvULPqTzjzuoJHGo2fiejyh66FX+L4GpqTRnQnD2ZSvWv9uflPoGqbtGrwfNy1rAw8V8qUekQRW86E/K3Q==", "comment"=>{"content"=>"Amazing!"}, "user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:21
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ app/controllers/comments_controller.rb:19
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:19
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:19
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "trail_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["content", "Amazing!"], ["user_id", 1], ["trail_id", 1], ["created_at", "2018-11-21 16:54:58.711523"], ["updated_at", "2018-11-21 16:54:58.711523"]]
+  ↳ app/controllers/comments_controller.rb:19
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ app/controllers/comments_controller.rb:19
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers] Rendered CommentSerializer with ActiveModelSerializers::Adapter::Attributes (4.14ms)
+Completed 200 OK in 20ms (Views: 7.6ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/users/1/trails/1/comments/10.json" for ::1 at 2018-11-21 11:54:58 -0500
+Processing by CommentsController#show as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1", "id"=>"10"}
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT  "comments".* FROM "comments" WHERE "comments"."id" = ? LIMIT ?[0m  [["id", 10], ["LIMIT", 1]]
+  ↳ app/controllers/comments_controller.rb:36
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:12
+[active_model_serializers] Rendered CommentSerializer with ActiveModelSerializers::Adapter::Attributes (3.31ms)
+Completed 200 OK in 13ms (Views: 5.9ms | ActiveRecord: 1.8ms)
+
+
+Started GET "/users/1/trails/1/comments.json" for ::1 at 2018-11-21 11:55:01 -0500
+Processing by CommentsController#index as JSON
+  Parameters: {"user_id"=>"1", "trail_id"=>"1"}
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments"[0m
+  ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.5ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE Trail Load (0.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/comments_controller.rb:8
+[active_model_serializers] Rendered ActiveModel::Serializer::CollectionSerializer with ActiveModelSerializers::Adapter::Attributes (43.97ms)
+Completed 200 OK in 47ms (Views: 44.4ms | ActiveRecord: 2.0ms)
+
+

@@ -1,4 +1,4 @@
-let commentId = 0;
+
 let current_path = window.location.pathname;
 let user = current_path.substring(7).slice(0, 1);
 let trail = current_path.substring(current_path.lastIndexOf('/') + 1);
@@ -12,6 +12,11 @@ function Comment(resp, user, trail) {
   this.content = resp.content;
   this.user_id = user;
   this.trail_id = trail;
+};
+
+// Object.prototype
+Comment.prototype.renderComment = function() {
+  showComment(this.id);
 };
 
 // Index of Comments
@@ -77,7 +82,7 @@ $(function() {
       success: function(resp) {
         // on success update DOM with resp in the form of data
         let comment = new Comment(resp, user, trail);
-        showComment(comment.id);
+        comment.renderComment();
       }
     });
     $("#new_comment").trigger('reset');
