@@ -15,7 +15,7 @@ Specs:
 - [x] Translate JSON responses into JS model objects.
 -     Upon new Comment submission, Comment data is used to create a JS Comment object.
 - [x] At least one of the JS model objects must have at least one method added by your code to the prototype.
--     let comment = new Comment(resp, user, trail); - comment data passed into showComment(comment.id) and appended to the DOM.
+-     let comment = new Comment(resp, user, trail); comment.renderComment(); - Comment.prototype.renderComment.
 
 Confirm
 
