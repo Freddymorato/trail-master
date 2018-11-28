@@ -16,6 +16,7 @@ ActiveRecord::Schema.define(version: 2018_11_20_214228) do
     t.string "content"
     t.integer "user_id"
     t.integer "trail_id"
+    t.string "comment_owner"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
