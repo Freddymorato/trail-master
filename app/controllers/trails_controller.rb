@@ -11,6 +11,10 @@ class TrailsController < ApplicationController
   def show
     @user = current_user
     @comment = Comment.new
+    respond_to do |f|
+      f.html
+      f.json { render json: @trail }
+    end
   end
 
   def create
