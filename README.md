@@ -17,11 +17,11 @@ To install all necessary gems, run
 
 To set up database and add seed data, run
 
-```rails db:migrate```
+```rake db:migrate```
 
 then
 
-```rails db:seed```
+```rake db:seed```
 
 ### Deploy the program on a local server
 
