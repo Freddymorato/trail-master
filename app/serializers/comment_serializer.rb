@@ -1,6 +1,5 @@
 class CommentSerializer < ActiveModel::Serializer
-  # attributes returned in JSON response
-  attributes :id, :content, :user_id, :trail_id
+  attributes :id, :content, :user_id, :trail_id, :comment_owner
   belongs_to :trail
   belongs_to :user
 end
