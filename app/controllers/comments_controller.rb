@@ -16,12 +16,12 @@ class CommentsController < ApplicationController
   end
 
   def create
-    @comment = Comment.create(content: params[:comment][:content], user_id: params[:user_id], trail_id: params[:trail_id])
+    @comment = Comment.create(content: params[:comment][:content], user_id: params[:user_id], trail_id: params[:trail_id], comment_owner: current_user.name)
     render json: @comment
   end
 
   def update
-    @comment.update(content: params[:comment][:content], user_id: params[:user_id], trail_id: params[:trail_id])
+    @comment.update(content: params[:comment][:content], user_id: params[:user_id], trail_id: params[:trail_id], comment_owner: current_user.name)
     render json: @comment
   end
 
