@@ -257,11 +257,11 @@ The national park service closed the 8,000-foot peak to the public after the fat
 
 
   comments = Comment.create([
-    {content: "Carry as little as possible, but choose that little with care.", user_id: 1, trail_id: 2},
-    {content: "Make sure to bring lots of water! This trail is long and it gets really hot.", user_id: 2, trail_id: 2},
-    {content: "There are several animals that inhabit the area around the Cascade Saddle trail, including cougars, black bears, beaver, foxes, falcons, porcupines and more!", user_id: 1, trail_id: 3},
-    {content: "The hike to the end point and back is under 5 miles round-trip and gains less than 200 feet of elevation, making it a pretty good trip for families with kids who can be coerced onto the trail.", user_id: 3, trail_id: 3},
-    {content: "There's no view more dramatic than what you see hanging onto a chain bolted into a cliff.", user_id: 4, trail_id: 1},
-    {content: "The Cascade Saddle Route is an alpine crossing recommended for experienced trampers as a fine weather, summer route.", user_id: 4, trail_id: 3},
-    {content: "The views of Zion Canyon's 270 million-year-old rock layers will time travel you back to the Triassic period when this section of the Colorado Plateau was a flat basin at sea level.", user_id: 2, trail_id: 1}
+    {content: "Carry as little as possible, but choose that little with care.", user_id: 1, trail_id: 2, comment_owner: "bob"},
+    {content: "Make sure to bring lots of water! This trail is long and it gets really hot.", user_id: 2, trail_id: 2, comment_owner: "joe"},
+    {content: "There are several animals that inhabit the area around the Cascade Saddle trail, including cougars, black bears, beaver, foxes, falcons, porcupines and more!", user_id: 1, trail_id: 3, comment_owner: "bob"},
+    {content: "The hike to the end point and back is under 5 miles round-trip and gains less than 200 feet of elevation, making it a pretty good trip for families with kids who can be coerced onto the trail.", user_id: 3, trail_id: 3, comment_owner: "sam"},
+    {content: "There's no view more dramatic than what you see hanging onto a chain bolted into a cliff.", user_id: 4, trail_id: 1, comment_owner: "ted"},
+    {content: "The Cascade Saddle Route is an alpine crossing recommended for experienced trampers as a fine weather, summer route.", user_id: 4, trail_id: 3, comment_owner: "ted"},
+    {content: "The views of Zion Canyon's 270 million-year-old rock layers will time travel you back to the Triassic period when this section of the Colorado Plateau was a flat basin at sea level.", user_id: 2, trail_id: 1, comment_owner: "joe"}
     ])

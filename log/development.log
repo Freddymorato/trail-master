@@ -32751,3 +32751,1983 @@ Completed 200 OK in 11ms (Views: 5.4ms | ActiveRecord: 0.6ms)
   [1m[36mComment Create (1.3ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "trail_id", "comment_owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "hi"], ["user_id", 1], ["trail_id", 1], ["comment_owner", "bob"], ["created_at", "2018-11-29 02:42:16.341387"], ["updated_at", "2018-11-29 02:42:16.341387"]]
   [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
   [1m[35m (0.3ms)[0m  [1m[34mSELECT COUNT(*) FROM "comments"[0m
+  [1m[35m (0.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/fredericomorato/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/fredericomorato/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/fredericomorato/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/fredericomorato/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/fredericomorato/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ?[0m  [["key", "environment"]]
+  ↳ /Users/fredericomorato/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar, "user_id" integer, "trail_id" integer, "comment_owner" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "countries"[0m
+  ↳ db/schema.rb:24
+  [1m[35m (1.7ms)[0m  [1m[35mCREATE TABLE "countries" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "flag" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "trails"[0m
+  ↳ db/schema.rb:31
+  [1m[35m (1.5ms)[0m  [1m[35mCREATE TABLE "trails" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image" varchar, "distance" integer, "duration" integer, "dangers" text, "difficulty" integer, "user_id" integer, "country_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:44
+  [1m[35m (1.1ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password_digest" varchar, "uid" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:44
+  [1m[35m (2.2ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181120214228)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180731180949),
+(20180731180904),
+(20180731180933);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.2ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.4ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-29 02:46:32.451386"], ["updated_at", "2018-11-29 02:46:32.451386"]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/fredericomorato/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/fredericomorato/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/fredericomorato/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[35mDROP TABLE IF EXISTS "comments"[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.1ms)[0m  [1m[34mSELECT sqlite_version(*)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (1.3ms)[0m  [1m[35mCREATE TABLE "comments" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "content" varchar, "user_id" integer, "trail_id" integer, "comment_owner" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:15
+  [1m[35m (0.9ms)[0m  [1m[35mDROP TABLE IF EXISTS "countries"[0m
+  ↳ db/schema.rb:24
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "countries" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "flag" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:24
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "trails"[0m
+  ↳ db/schema.rb:31
+  [1m[35m (1.8ms)[0m  [1m[35mCREATE TABLE "trails" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "image" varchar, "distance" integer, "duration" integer, "dangers" text, "difficulty" integer, "user_id" integer, "country_id" integer, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:31
+  [1m[35m (0.2ms)[0m  [1m[35mDROP TABLE IF EXISTS "users"[0m
+  ↳ db/schema.rb:44
+  [1m[35m (1.6ms)[0m  [1m[35mCREATE TABLE "users" ("id" integer PRIMARY KEY AUTOINCREMENT NOT NULL, "name" varchar, "email" varchar, "password_digest" varchar, "uid" text, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:44
+  [1m[35m (2.0ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" varchar NOT NULL PRIMARY KEY)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ db/schema.rb:13
+  [1m[35m (2.0ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES (20181120214228)[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.4ms)[0m  [1m[32mINSERT INTO "schema_migrations" (version) VALUES
+(20180731180949),
+(20180731180904),
+(20180731180933);
+
+[0m
+  ↳ db/schema.rb:13
+  [1m[35m (1.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" varchar NOT NULL PRIMARY KEY, "value" varchar, "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL)[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.2ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ db/schema.rb:13
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Create (0.7ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["key", "environment"], ["value", "development"], ["created_at", "2018-11-29 02:46:32.493816"], ["updated_at", "2018-11-29 02:46:32.493816"]]
+  ↳ db/schema.rb:13
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/schema.rb:13
+  [1m[36mActiveRecord::InternalMetadata Load (0.1ms)[0m  [1m[34mSELECT  "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = ? LIMIT ?[0m  [["key", "environment"], ["LIMIT", 1]]
+  ↳ /Users/fredericomorato/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ /Users/fredericomorato/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[36mActiveRecord::InternalMetadata Update (0.4ms)[0m  [1m[33mUPDATE "ar_internal_metadata" SET "value" = ?, "updated_at" = ? WHERE "ar_internal_metadata"."key" = ?[0m  [["value", "test"], ["updated_at", "2018-11-29 02:46:32.500639"], ["key", "environment"]]
+  ↳ /Users/fredericomorato/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ /Users/fredericomorato/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ /Users/fredericomorato/.rvm/gems/ruby-2.3.3/bin/rake:23
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Andorra"], ["flag", "ad"], ["created_at", "2018-11-29 02:46:32.548978"], ["updated_at", "2018-11-29 02:46:32.548978"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Arab Emirates"], ["flag", "ae"], ["created_at", "2018-11-29 02:46:32.553115"], ["updated_at", "2018-11-29 02:46:32.553115"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Afghanistan"], ["flag", "af"], ["created_at", "2018-11-29 02:46:32.556743"], ["updated_at", "2018-11-29 02:46:32.556743"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Antigua and Barbuda"], ["flag", "ag"], ["created_at", "2018-11-29 02:46:32.561027"], ["updated_at", "2018-11-29 02:46:32.561027"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Anguilla"], ["flag", "ai"], ["created_at", "2018-11-29 02:46:32.566225"], ["updated_at", "2018-11-29 02:46:32.566225"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Albania"], ["flag", "al"], ["created_at", "2018-11-29 02:46:32.570756"], ["updated_at", "2018-11-29 02:46:32.570756"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Armenia"], ["flag", "am"], ["created_at", "2018-11-29 02:46:32.576457"], ["updated_at", "2018-11-29 02:46:32.576457"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Angola"], ["flag", "ao"], ["created_at", "2018-11-29 02:46:32.580747"], ["updated_at", "2018-11-29 02:46:32.580747"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (11.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Antarctica"], ["flag", "aq"], ["created_at", "2018-11-29 02:46:32.595925"], ["updated_at", "2018-11-29 02:46:32.595925"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Argentina"], ["flag", "ar"], ["created_at", "2018-11-29 02:46:32.600178"], ["updated_at", "2018-11-29 02:46:32.600178"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "American Samoa"], ["flag", "as"], ["created_at", "2018-11-29 02:46:32.604937"], ["updated_at", "2018-11-29 02:46:32.604937"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Austria"], ["flag", "at"], ["created_at", "2018-11-29 02:46:32.609538"], ["updated_at", "2018-11-29 02:46:32.609538"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Australia"], ["flag", "au"], ["created_at", "2018-11-29 02:46:32.617040"], ["updated_at", "2018-11-29 02:46:32.617040"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Aruba"], ["flag", "aw"], ["created_at", "2018-11-29 02:46:32.630154"], ["updated_at", "2018-11-29 02:46:32.630154"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Aland Islands"], ["flag", "ax"], ["created_at", "2018-11-29 02:46:32.634569"], ["updated_at", "2018-11-29 02:46:32.634569"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Azerbaijan"], ["flag", "az"], ["created_at", "2018-11-29 02:46:32.638673"], ["updated_at", "2018-11-29 02:46:32.638673"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bosnia and Herzegovina"], ["flag", "ba"], ["created_at", "2018-11-29 02:46:32.643218"], ["updated_at", "2018-11-29 02:46:32.643218"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Barbados"], ["flag", "bb"], ["created_at", "2018-11-29 02:46:32.648177"], ["updated_at", "2018-11-29 02:46:32.648177"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bangladesh"], ["flag", "bd"], ["created_at", "2018-11-29 02:46:32.653263"], ["updated_at", "2018-11-29 02:46:32.653263"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Belgium"], ["flag", "be"], ["created_at", "2018-11-29 02:46:32.657184"], ["updated_at", "2018-11-29 02:46:32.657184"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bulgaria"], ["flag", "bg"], ["created_at", "2018-11-29 02:46:32.662083"], ["updated_at", "2018-11-29 02:46:32.662083"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Burkina Faso"], ["flag", "bf"], ["created_at", "2018-11-29 02:46:32.666127"], ["updated_at", "2018-11-29 02:46:32.666127"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bahrain"], ["flag", "bh"], ["created_at", "2018-11-29 02:46:32.671410"], ["updated_at", "2018-11-29 02:46:32.671410"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Burundi"], ["flag", "bi"], ["created_at", "2018-11-29 02:46:32.677077"], ["updated_at", "2018-11-29 02:46:32.677077"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (10.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Benin"], ["flag", "bj"], ["created_at", "2018-11-29 02:46:32.681354"], ["updated_at", "2018-11-29 02:46:32.681354"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bermuda"], ["flag", "bm"], ["created_at", "2018-11-29 02:46:32.696679"], ["updated_at", "2018-11-29 02:46:32.696679"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.7ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Brunei"], ["flag", "bn"], ["created_at", "2018-11-29 02:46:32.701795"], ["updated_at", "2018-11-29 02:46:32.701795"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bolivia"], ["flag", "bo"], ["created_at", "2018-11-29 02:46:32.707951"], ["updated_at", "2018-11-29 02:46:32.707951"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Brazil"], ["flag", "br"], ["created_at", "2018-11-29 02:46:32.712433"], ["updated_at", "2018-11-29 02:46:32.712433"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.8ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bahamas"], ["flag", "bs"], ["created_at", "2018-11-29 02:46:32.716218"], ["updated_at", "2018-11-29 02:46:32.716218"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Bhutan"], ["flag", "bt"], ["created_at", "2018-11-29 02:46:32.725962"], ["updated_at", "2018-11-29 02:46:32.725962"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Botswana"], ["flag", "bw"], ["created_at", "2018-11-29 02:46:32.731207"], ["updated_at", "2018-11-29 02:46:32.731207"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Belarus"], ["flag", "by"], ["created_at", "2018-11-29 02:46:32.735714"], ["updated_at", "2018-11-29 02:46:32.735714"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.9ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Belize"], ["flag", "bz"], ["created_at", "2018-11-29 02:46:32.739669"], ["updated_at", "2018-11-29 02:46:32.739669"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Canada"], ["flag", "ca"], ["created_at", "2018-11-29 02:46:32.744527"], ["updated_at", "2018-11-29 02:46:32.744527"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Switzerland"], ["flag", "ch"], ["created_at", "2018-11-29 02:46:32.748373"], ["updated_at", "2018-11-29 02:46:32.748373"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cote d'Ivoire"], ["flag", "ci"], ["created_at", "2018-11-29 02:46:32.752307"], ["updated_at", "2018-11-29 02:46:32.752307"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.9ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cook Islands"], ["flag", "ck"], ["created_at", "2018-11-29 02:46:32.756664"], ["updated_at", "2018-11-29 02:46:32.756664"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Chile"], ["flag", "cl"], ["created_at", "2018-11-29 02:46:32.761610"], ["updated_at", "2018-11-29 02:46:32.761610"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cameroon"], ["flag", "cm"], ["created_at", "2018-11-29 02:46:32.766613"], ["updated_at", "2018-11-29 02:46:32.766613"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (2.2ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "China"], ["flag", "cn"], ["created_at", "2018-11-29 02:46:32.771965"], ["updated_at", "2018-11-29 02:46:32.771965"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (2.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Colombia"], ["flag", "co"], ["created_at", "2018-11-29 02:46:32.780334"], ["updated_at", "2018-11-29 02:46:32.780334"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Costa Rica"], ["flag", "cr"], ["created_at", "2018-11-29 02:46:32.801910"], ["updated_at", "2018-11-29 02:46:32.801910"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cuba"], ["flag", "cu"], ["created_at", "2018-11-29 02:46:32.807178"], ["updated_at", "2018-11-29 02:46:32.807178"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cape Verde"], ["flag", "cv"], ["created_at", "2018-11-29 02:46:32.812178"], ["updated_at", "2018-11-29 02:46:32.812178"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Czech Republic"], ["flag", "cz"], ["created_at", "2018-11-29 02:46:32.816438"], ["updated_at", "2018-11-29 02:46:32.816438"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Germany"], ["flag", "de"], ["created_at", "2018-11-29 02:46:32.827007"], ["updated_at", "2018-11-29 02:46:32.827007"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Djibouti"], ["flag", "dj"], ["created_at", "2018-11-29 02:46:32.831933"], ["updated_at", "2018-11-29 02:46:32.831933"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Denmark"], ["flag", "dk"], ["created_at", "2018-11-29 02:46:32.836826"], ["updated_at", "2018-11-29 02:46:32.836826"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Dominica"], ["flag", "dm"], ["created_at", "2018-11-29 02:46:32.840663"], ["updated_at", "2018-11-29 02:46:32.840663"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Dominican Republic"], ["flag", "do"], ["created_at", "2018-11-29 02:46:32.844277"], ["updated_at", "2018-11-29 02:46:32.844277"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Algeria"], ["flag", "dz"], ["created_at", "2018-11-29 02:46:32.849011"], ["updated_at", "2018-11-29 02:46:32.849011"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ecuador"], ["flag", "ec"], ["created_at", "2018-11-29 02:46:32.852929"], ["updated_at", "2018-11-29 02:46:32.852929"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Estonia"], ["flag", "ee"], ["created_at", "2018-11-29 02:46:32.856990"], ["updated_at", "2018-11-29 02:46:32.856990"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (1.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Egypt"], ["flag", "eg"], ["created_at", "2018-11-29 02:46:32.860433"], ["updated_at", "2018-11-29 02:46:32.860433"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Western Sahara"], ["flag", "eh"], ["created_at", "2018-11-29 02:46:32.865907"], ["updated_at", "2018-11-29 02:46:32.865907"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.7ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Eritrea"], ["flag", "er"], ["created_at", "2018-11-29 02:46:32.870328"], ["updated_at", "2018-11-29 02:46:32.870328"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (2.1ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Spain"], ["flag", "es"], ["created_at", "2018-11-29 02:46:32.885151"], ["updated_at", "2018-11-29 02:46:32.885151"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ethiopia"], ["flag", "et"], ["created_at", "2018-11-29 02:46:32.904222"], ["updated_at", "2018-11-29 02:46:32.904222"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Finland"], ["flag", "fi"], ["created_at", "2018-11-29 02:46:32.909085"], ["updated_at", "2018-11-29 02:46:32.909085"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (1.2ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Fiji"], ["flag", "fj"], ["created_at", "2018-11-29 02:46:32.914071"], ["updated_at", "2018-11-29 02:46:32.914071"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.5ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Falkland Islands"], ["flag", "fk"], ["created_at", "2018-11-29 02:46:32.924173"], ["updated_at", "2018-11-29 02:46:32.924173"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Micronesia"], ["flag", "fm"], ["created_at", "2018-11-29 02:46:32.928729"], ["updated_at", "2018-11-29 02:46:32.928729"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Faroe"], ["flag", "fo"], ["created_at", "2018-11-29 02:46:32.932091"], ["updated_at", "2018-11-29 02:46:32.932091"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "France"], ["flag", "fr"], ["created_at", "2018-11-29 02:46:32.935515"], ["updated_at", "2018-11-29 02:46:32.935515"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gabon"], ["flag", "ga"], ["created_at", "2018-11-29 02:46:32.939802"], ["updated_at", "2018-11-29 02:46:32.939802"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (1.0ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Great Britain"], ["flag", "gb"], ["created_at", "2018-11-29 02:46:32.943628"], ["updated_at", "2018-11-29 02:46:32.943628"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Grenada"], ["flag", "gd"], ["created_at", "2018-11-29 02:46:32.947702"], ["updated_at", "2018-11-29 02:46:32.947702"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Georgia"], ["flag", "ge"], ["created_at", "2018-11-29 02:46:32.952404"], ["updated_at", "2018-11-29 02:46:32.952404"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "French Guiana"], ["flag", "gf"], ["created_at", "2018-11-29 02:46:32.956823"], ["updated_at", "2018-11-29 02:46:32.956823"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.8ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Guernsey"], ["flag", "gg"], ["created_at", "2018-11-29 02:46:32.960748"], ["updated_at", "2018-11-29 02:46:32.960748"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ghana"], ["flag", "gh"], ["created_at", "2018-11-29 02:46:32.965633"], ["updated_at", "2018-11-29 02:46:32.965633"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gibraltar"], ["flag", "gi"], ["created_at", "2018-11-29 02:46:32.969754"], ["updated_at", "2018-11-29 02:46:32.969754"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (1.1ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Greenland"], ["flag", "gl"], ["created_at", "2018-11-29 02:46:32.976033"], ["updated_at", "2018-11-29 02:46:32.976033"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Gambia"], ["flag", "gm"], ["created_at", "2018-11-29 02:46:32.981509"], ["updated_at", "2018-11-29 02:46:32.981509"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Guinea"], ["flag", "gn"], ["created_at", "2018-11-29 02:46:32.997187"], ["updated_at", "2018-11-29 02:46:32.997187"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Equatorial Guinea"], ["flag", "gq"], ["created_at", "2018-11-29 02:46:33.002515"], ["updated_at", "2018-11-29 02:46:33.002515"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Greece"], ["flag", "gr"], ["created_at", "2018-11-29 02:46:33.008727"], ["updated_at", "2018-11-29 02:46:33.008727"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "South Georgia"], ["flag", "gs"], ["created_at", "2018-11-29 02:46:33.013285"], ["updated_at", "2018-11-29 02:46:33.013285"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Guatemala"], ["flag", "gt"], ["created_at", "2018-11-29 02:46:33.017696"], ["updated_at", "2018-11-29 02:46:33.017696"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (5.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Guam"], ["flag", "gu"], ["created_at", "2018-11-29 02:46:33.027127"], ["updated_at", "2018-11-29 02:46:33.027127"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.6ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Guinea-Bissau"], ["flag", "gw"], ["created_at", "2018-11-29 02:46:33.033497"], ["updated_at", "2018-11-29 02:46:33.033497"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Guyana"], ["flag", "gy"], ["created_at", "2018-11-29 02:46:33.037593"], ["updated_at", "2018-11-29 02:46:33.037593"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (1.1ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Hongkong"], ["flag", "hk"], ["created_at", "2018-11-29 02:46:33.041820"], ["updated_at", "2018-11-29 02:46:33.041820"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Croatia"], ["flag", "hr"], ["created_at", "2018-11-29 02:46:33.047095"], ["updated_at", "2018-11-29 02:46:33.047095"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Haiti"], ["flag", "ht"], ["created_at", "2018-11-29 02:46:33.050876"], ["updated_at", "2018-11-29 02:46:33.050876"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Hungary"], ["flag", "hu"], ["created_at", "2018-11-29 02:46:33.054234"], ["updated_at", "2018-11-29 02:46:33.054234"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Indonesia"], ["flag", "id"], ["created_at", "2018-11-29 02:46:33.059205"], ["updated_at", "2018-11-29 02:46:33.059205"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ireland"], ["flag", "ie"], ["created_at", "2018-11-29 02:46:33.063842"], ["updated_at", "2018-11-29 02:46:33.063842"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (1.7ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Israel"], ["flag", "il"], ["created_at", "2018-11-29 02:46:33.068819"], ["updated_at", "2018-11-29 02:46:33.068819"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Isle of Man"], ["flag", "im"], ["created_at", "2018-11-29 02:46:33.075642"], ["updated_at", "2018-11-29 02:46:33.075642"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "India"], ["flag", "in"], ["created_at", "2018-11-29 02:46:33.081682"], ["updated_at", "2018-11-29 02:46:33.081682"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "British Indian Ocean Territory"], ["flag", "io"], ["created_at", "2018-11-29 02:46:33.098970"], ["updated_at", "2018-11-29 02:46:33.098970"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Iraq"], ["flag", "iq"], ["created_at", "2018-11-29 02:46:33.103794"], ["updated_at", "2018-11-29 02:46:33.103794"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Iran"], ["flag", "ir"], ["created_at", "2018-11-29 02:46:33.109231"], ["updated_at", "2018-11-29 02:46:33.109231"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Iceland"], ["flag", "is"], ["created_at", "2018-11-29 02:46:33.114307"], ["updated_at", "2018-11-29 02:46:33.114307"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Italy"], ["flag", "it"], ["created_at", "2018-11-29 02:46:33.117971"], ["updated_at", "2018-11-29 02:46:33.117971"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (5.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jersey"], ["flag", "je"], ["created_at", "2018-11-29 02:46:33.125751"], ["updated_at", "2018-11-29 02:46:33.125751"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jamaica"], ["flag", "jm"], ["created_at", "2018-11-29 02:46:33.130053"], ["updated_at", "2018-11-29 02:46:33.130053"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Jordan"], ["flag", "jo"], ["created_at", "2018-11-29 02:46:33.133557"], ["updated_at", "2018-11-29 02:46:33.133557"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.7ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Japan"], ["flag", "jp"], ["created_at", "2018-11-29 02:46:33.138104"], ["updated_at", "2018-11-29 02:46:33.138104"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kenya"], ["flag", "ke"], ["created_at", "2018-11-29 02:46:33.142228"], ["updated_at", "2018-11-29 02:46:33.142228"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kyrgyzstan"], ["flag", "kg"], ["created_at", "2018-11-29 02:46:33.145759"], ["updated_at", "2018-11-29 02:46:33.145759"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (1.1ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cambodia"], ["flag", "kh"], ["created_at", "2018-11-29 02:46:33.149347"], ["updated_at", "2018-11-29 02:46:33.149347"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kiribati"], ["flag", "ki"], ["created_at", "2018-11-29 02:46:33.153963"], ["updated_at", "2018-11-29 02:46:33.153963"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Comoros"], ["flag", "km"], ["created_at", "2018-11-29 02:46:33.157696"], ["updated_at", "2018-11-29 02:46:33.157696"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Saint Kitts and Nevis"], ["flag", "kn"], ["created_at", "2018-11-29 02:46:33.161382"], ["updated_at", "2018-11-29 02:46:33.161382"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "North Korea"], ["flag", "kp"], ["created_at", "2018-11-29 02:46:33.166198"], ["updated_at", "2018-11-29 02:46:33.166198"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "South Korea"], ["flag", "kr"], ["created_at", "2018-11-29 02:46:33.170200"], ["updated_at", "2018-11-29 02:46:33.170200"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.7ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kuwait"], ["flag", "kw"], ["created_at", "2018-11-29 02:46:33.174665"], ["updated_at", "2018-11-29 02:46:33.174665"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Cayman Islands"], ["flag", "ky"], ["created_at", "2018-11-29 02:46:33.181852"], ["updated_at", "2018-11-29 02:46:33.181852"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Kazakhstan"], ["flag", "kz"], ["created_at", "2018-11-29 02:46:33.197925"], ["updated_at", "2018-11-29 02:46:33.197925"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Laos"], ["flag", "la"], ["created_at", "2018-11-29 02:46:33.202142"], ["updated_at", "2018-11-29 02:46:33.202142"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lebanon"], ["flag", "lb"], ["created_at", "2018-11-29 02:46:33.206942"], ["updated_at", "2018-11-29 02:46:33.206942"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Saint Lucia"], ["flag", "lc"], ["created_at", "2018-11-29 02:46:33.212242"], ["updated_at", "2018-11-29 02:46:33.212242"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Liechtenstein"], ["flag", "li"], ["created_at", "2018-11-29 02:46:33.215798"], ["updated_at", "2018-11-29 02:46:33.215798"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (6.2ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sri Lanka"], ["flag", "lk"], ["created_at", "2018-11-29 02:46:33.219227"], ["updated_at", "2018-11-29 02:46:33.219227"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Liberia"], ["flag", "lr"], ["created_at", "2018-11-29 02:46:33.229862"], ["updated_at", "2018-11-29 02:46:33.229862"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lesotho"], ["flag", "ls"], ["created_at", "2018-11-29 02:46:33.233416"], ["updated_at", "2018-11-29 02:46:33.233416"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Lithuania"], ["flag", "lt"], ["created_at", "2018-11-29 02:46:33.236936"], ["updated_at", "2018-11-29 02:46:33.236936"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.6ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Luxembourg"], ["flag", "lu"], ["created_at", "2018-11-29 02:46:33.241405"], ["updated_at", "2018-11-29 02:46:33.241405"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Latvia"], ["flag", "lv"], ["created_at", "2018-11-29 02:46:33.245039"], ["updated_at", "2018-11-29 02:46:33.245039"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Libya"], ["flag", "ly"], ["created_at", "2018-11-29 02:46:33.248474"], ["updated_at", "2018-11-29 02:46:33.248474"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Morocco"], ["flag", "ma"], ["created_at", "2018-11-29 02:46:33.252760"], ["updated_at", "2018-11-29 02:46:33.252760"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Monaco"], ["flag", "mc"], ["created_at", "2018-11-29 02:46:33.256656"], ["updated_at", "2018-11-29 02:46:33.256656"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (2.3ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Moldova"], ["flag", "md"], ["created_at", "2018-11-29 02:46:33.260188"], ["updated_at", "2018-11-29 02:46:33.260188"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Montenegro"], ["flag", "me"], ["created_at", "2018-11-29 02:46:33.266183"], ["updated_at", "2018-11-29 02:46:33.266183"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Madagascar"], ["flag", "mg"], ["created_at", "2018-11-29 02:46:33.272588"], ["updated_at", "2018-11-29 02:46:33.272588"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Marshall Islands"], ["flag", "mh"], ["created_at", "2018-11-29 02:46:33.279336"], ["updated_at", "2018-11-29 02:46:33.279336"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Macedonia"], ["flag", "mk"], ["created_at", "2018-11-29 02:46:33.284274"], ["updated_at", "2018-11-29 02:46:33.284274"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (2.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mali"], ["flag", "ml"], ["created_at", "2018-11-29 02:46:33.304001"], ["updated_at", "2018-11-29 02:46:33.304001"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Myanmar"], ["flag", "mm"], ["created_at", "2018-11-29 02:46:33.308339"], ["updated_at", "2018-11-29 02:46:33.308339"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.8ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mongolia"], ["flag", "mn"], ["created_at", "2018-11-29 02:46:33.313315"], ["updated_at", "2018-11-29 02:46:33.313315"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Macau"], ["flag", "mo"], ["created_at", "2018-11-29 02:46:33.318920"], ["updated_at", "2018-11-29 02:46:33.318920"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Montserrat"], ["flag", "ms"], ["created_at", "2018-11-29 02:46:33.328194"], ["updated_at", "2018-11-29 02:46:33.328194"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Malta"], ["flag", "mt"], ["created_at", "2018-11-29 02:46:33.332917"], ["updated_at", "2018-11-29 02:46:33.332917"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mauritius"], ["flag", "mu"], ["created_at", "2018-11-29 02:46:33.336312"], ["updated_at", "2018-11-29 02:46:33.336312"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (1.2ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Maldives"], ["flag", "mv"], ["created_at", "2018-11-29 02:46:33.339702"], ["updated_at", "2018-11-29 02:46:33.339702"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Malawi"], ["flag", "mw"], ["created_at", "2018-11-29 02:46:33.344317"], ["updated_at", "2018-11-29 02:46:33.344317"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mexico"], ["flag", "mx"], ["created_at", "2018-11-29 02:46:33.347824"], ["updated_at", "2018-11-29 02:46:33.347824"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Malaysia"], ["flag", "my"], ["created_at", "2018-11-29 02:46:33.351319"], ["updated_at", "2018-11-29 02:46:33.351319"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Mozambique"], ["flag", "mz"], ["created_at", "2018-11-29 02:46:33.355511"], ["updated_at", "2018-11-29 02:46:33.355511"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Namibia"], ["flag", "na"], ["created_at", "2018-11-29 02:46:33.359061"], ["updated_at", "2018-11-29 02:46:33.359061"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (1.2ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Niger"], ["flag", "ne"], ["created_at", "2018-11-29 02:46:33.363148"], ["updated_at", "2018-11-29 02:46:33.363148"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Norfolk Island"], ["flag", "nf"], ["created_at", "2018-11-29 02:46:33.368146"], ["updated_at", "2018-11-29 02:46:33.368146"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nigeria"], ["flag", "ng"], ["created_at", "2018-11-29 02:46:33.372014"], ["updated_at", "2018-11-29 02:46:33.372014"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nicaragua"], ["flag", "ni"], ["created_at", "2018-11-29 02:46:33.375767"], ["updated_at", "2018-11-29 02:46:33.375767"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (4.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.9ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Netherlands"], ["flag", "nl"], ["created_at", "2018-11-29 02:46:33.383212"], ["updated_at", "2018-11-29 02:46:33.383212"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Norway"], ["flag", "no"], ["created_at", "2018-11-29 02:46:33.388138"], ["updated_at", "2018-11-29 02:46:33.388138"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nepal"], ["flag", "np"], ["created_at", "2018-11-29 02:46:33.406311"], ["updated_at", "2018-11-29 02:46:33.406311"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Nauru"], ["flag", "nr"], ["created_at", "2018-11-29 02:46:33.411137"], ["updated_at", "2018-11-29 02:46:33.411137"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.9ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Niue"], ["flag", "nu"], ["created_at", "2018-11-29 02:46:33.416515"], ["updated_at", "2018-11-29 02:46:33.416515"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (6.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.8ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "New Zealand"], ["flag", "nz"], ["created_at", "2018-11-29 02:46:33.427437"], ["updated_at", "2018-11-29 02:46:33.427437"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Oman"], ["flag", "om"], ["created_at", "2018-11-29 02:46:33.432616"], ["updated_at", "2018-11-29 02:46:33.432616"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Panama"], ["flag", "pa"], ["created_at", "2018-11-29 02:46:33.436078"], ["updated_at", "2018-11-29 02:46:33.436078"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Peru"], ["flag", "pe"], ["created_at", "2018-11-29 02:46:33.439529"], ["updated_at", "2018-11-29 02:46:33.439529"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Polynesia"], ["flag", "pf"], ["created_at", "2018-11-29 02:46:33.443953"], ["updated_at", "2018-11-29 02:46:33.443953"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Papua New Guinea"], ["flag", "pg"], ["created_at", "2018-11-29 02:46:33.447473"], ["updated_at", "2018-11-29 02:46:33.447473"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Philippines"], ["flag", "ph"], ["created_at", "2018-11-29 02:46:33.451069"], ["updated_at", "2018-11-29 02:46:33.451069"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pakistan"], ["flag", "pk"], ["created_at", "2018-11-29 02:46:33.455585"], ["updated_at", "2018-11-29 02:46:33.455585"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Poland"], ["flag", "pl"], ["created_at", "2018-11-29 02:46:33.459211"], ["updated_at", "2018-11-29 02:46:33.459211"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (1.1ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Pitcairn Islands"], ["flag", "pn"], ["created_at", "2018-11-29 02:46:33.463441"], ["updated_at", "2018-11-29 02:46:33.463441"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Puerto Rico"], ["flag", "pr"], ["created_at", "2018-11-29 02:46:33.468088"], ["updated_at", "2018-11-29 02:46:33.468088"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Palestine"], ["flag", "ps"], ["created_at", "2018-11-29 02:46:33.471599"], ["updated_at", "2018-11-29 02:46:33.471599"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Palau"], ["flag", "pw"], ["created_at", "2018-11-29 02:46:33.475163"], ["updated_at", "2018-11-29 02:46:33.475163"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (2.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Paraguay"], ["flag", "py"], ["created_at", "2018-11-29 02:46:33.481505"], ["updated_at", "2018-11-29 02:46:33.481505"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.7ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Qatar"], ["flag", "qa"], ["created_at", "2018-11-29 02:46:33.487630"], ["updated_at", "2018-11-29 02:46:33.487630"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (11.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Romania"], ["flag", "ro"], ["created_at", "2018-11-29 02:46:33.502767"], ["updated_at", "2018-11-29 02:46:33.502767"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Serbia"], ["flag", "rs"], ["created_at", "2018-11-29 02:46:33.507732"], ["updated_at", "2018-11-29 02:46:33.507732"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (2.7ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Russia"], ["flag", "ru"], ["created_at", "2018-11-29 02:46:33.514023"], ["updated_at", "2018-11-29 02:46:33.514023"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Rwanda"], ["flag", "rw"], ["created_at", "2018-11-29 02:46:33.518494"], ["updated_at", "2018-11-29 02:46:33.518494"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Saudi Arabia"], ["flag", "sa"], ["created_at", "2018-11-29 02:46:33.526437"], ["updated_at", "2018-11-29 02:46:33.526437"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Solomon Islands"], ["flag", "sb"], ["created_at", "2018-11-29 02:46:33.530909"], ["updated_at", "2018-11-29 02:46:33.530909"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Seychelles"], ["flag", "sc"], ["created_at", "2018-11-29 02:46:33.534401"], ["updated_at", "2018-11-29 02:46:33.534401"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.8ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sudan"], ["flag", "sd"], ["created_at", "2018-11-29 02:46:33.538105"], ["updated_at", "2018-11-29 02:46:33.538105"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sweden"], ["flag", "se"], ["created_at", "2018-11-29 02:46:33.542681"], ["updated_at", "2018-11-29 02:46:33.542681"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Singapore"], ["flag", "sg"], ["created_at", "2018-11-29 02:46:33.547715"], ["updated_at", "2018-11-29 02:46:33.547715"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Saint Helena"], ["flag", "sh"], ["created_at", "2018-11-29 02:46:33.552113"], ["updated_at", "2018-11-29 02:46:33.552113"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Slovenia"], ["flag", "si"], ["created_at", "2018-11-29 02:46:33.555850"], ["updated_at", "2018-11-29 02:46:33.555850"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (2.1ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Slovakia"], ["flag", "sk"], ["created_at", "2018-11-29 02:46:33.559628"], ["updated_at", "2018-11-29 02:46:33.559628"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sierra Leone"], ["flag", "sl"], ["created_at", "2018-11-29 02:46:33.565081"], ["updated_at", "2018-11-29 02:46:33.565081"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "San Marino"], ["flag", "sm"], ["created_at", "2018-11-29 02:46:33.568602"], ["updated_at", "2018-11-29 02:46:33.568602"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Senegal"], ["flag", "sn"], ["created_at", "2018-11-29 02:46:33.572104"], ["updated_at", "2018-11-29 02:46:33.572104"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Somalia"], ["flag", "so"], ["created_at", "2018-11-29 02:46:33.576298"], ["updated_at", "2018-11-29 02:46:33.576298"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Suriname"], ["flag", "sr"], ["created_at", "2018-11-29 02:46:33.581254"], ["updated_at", "2018-11-29 02:46:33.581254"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (2.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "South Sudan"], ["flag", "ss"], ["created_at", "2018-11-29 02:46:33.587699"], ["updated_at", "2018-11-29 02:46:33.587699"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sao Tome and Principe"], ["flag", "st"], ["created_at", "2018-11-29 02:46:33.603160"], ["updated_at", "2018-11-29 02:46:33.603160"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "El Salvador"], ["flag", "sv"], ["created_at", "2018-11-29 02:46:33.607985"], ["updated_at", "2018-11-29 02:46:33.607985"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Sint Maarten"], ["flag", "sx"], ["created_at", "2018-11-29 02:46:33.612332"], ["updated_at", "2018-11-29 02:46:33.612332"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Syria"], ["flag", "sy"], ["created_at", "2018-11-29 02:46:33.617928"], ["updated_at", "2018-11-29 02:46:33.617928"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.4ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Swaziland"], ["flag", "sz"], ["created_at", "2018-11-29 02:46:33.627119"], ["updated_at", "2018-11-29 02:46:33.627119"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Turks and Caicos Islands"], ["flag", "tc"], ["created_at", "2018-11-29 02:46:33.633134"], ["updated_at", "2018-11-29 02:46:33.633134"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Chad"], ["flag", "td"], ["created_at", "2018-11-29 02:46:33.636487"], ["updated_at", "2018-11-29 02:46:33.636487"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.8ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "French Southern and Antarctic Lands"], ["flag", "tf"], ["created_at", "2018-11-29 02:46:33.640161"], ["updated_at", "2018-11-29 02:46:33.640161"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Togo"], ["flag", "tg"], ["created_at", "2018-11-29 02:46:33.644758"], ["updated_at", "2018-11-29 02:46:33.644758"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Thailand"], ["flag", "th"], ["created_at", "2018-11-29 02:46:33.648297"], ["updated_at", "2018-11-29 02:46:33.648297"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tajikistan"], ["flag", "tj"], ["created_at", "2018-11-29 02:46:33.652454"], ["updated_at", "2018-11-29 02:46:33.652454"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tokelau"], ["flag", "tk"], ["created_at", "2018-11-29 02:46:33.656472"], ["updated_at", "2018-11-29 02:46:33.656472"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Timor-Leste"], ["flag", "tl"], ["created_at", "2018-11-29 02:46:33.659825"], ["updated_at", "2018-11-29 02:46:33.659825"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Turkmenistan"], ["flag", "tm"], ["created_at", "2018-11-29 02:46:33.664764"], ["updated_at", "2018-11-29 02:46:33.664764"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tunisia"], ["flag", "tn"], ["created_at", "2018-11-29 02:46:33.668918"], ["updated_at", "2018-11-29 02:46:33.668918"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.0ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tonga"], ["flag", "to"], ["created_at", "2018-11-29 02:46:33.672745"], ["updated_at", "2018-11-29 02:46:33.672745"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Turkey"], ["flag", "tr"], ["created_at", "2018-11-29 02:46:33.677315"], ["updated_at", "2018-11-29 02:46:33.677315"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.3ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.9ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Trinidad and Tobago"], ["flag", "tt"], ["created_at", "2018-11-29 02:46:33.682419"], ["updated_at", "2018-11-29 02:46:33.682419"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (1.1ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tuvalu"], ["flag", "tv"], ["created_at", "2018-11-29 02:46:33.687890"], ["updated_at", "2018-11-29 02:46:33.687890"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Taiwan"], ["flag", "tw"], ["created_at", "2018-11-29 02:46:33.692851"], ["updated_at", "2018-11-29 02:46:33.692851"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Tanzania"], ["flag", "tz"], ["created_at", "2018-11-29 02:46:33.707825"], ["updated_at", "2018-11-29 02:46:33.707825"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Ukraine"], ["flag", "ua"], ["created_at", "2018-11-29 02:46:33.712336"], ["updated_at", "2018-11-29 02:46:33.712336"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Uganda"], ["flag", "ug"], ["created_at", "2018-11-29 02:46:33.717686"], ["updated_at", "2018-11-29 02:46:33.717686"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "United States"], ["flag", "us"], ["created_at", "2018-11-29 02:46:33.727120"], ["updated_at", "2018-11-29 02:46:33.727120"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Uruguay"], ["flag", "uy"], ["created_at", "2018-11-29 02:46:33.732397"], ["updated_at", "2018-11-29 02:46:33.732397"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Uzbekistan"], ["flag", "uz"], ["created_at", "2018-11-29 02:46:33.735953"], ["updated_at", "2018-11-29 02:46:33.735953"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Vatican City"], ["flag", "va"], ["created_at", "2018-11-29 02:46:33.739197"], ["updated_at", "2018-11-29 02:46:33.739197"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Saint Vincent and The Grenadines"], ["flag", "vc"], ["created_at", "2018-11-29 02:46:33.743042"], ["updated_at", "2018-11-29 02:46:33.743042"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.7ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Venezuela"], ["flag", "ve"], ["created_at", "2018-11-29 02:46:33.748149"], ["updated_at", "2018-11-29 02:46:33.748149"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.4ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.7ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "British Virgin Islands"], ["flag", "vg"], ["created_at", "2018-11-29 02:46:33.752012"], ["updated_at", "2018-11-29 02:46:33.752012"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "United States Virgin Islands"], ["flag", "vi"], ["created_at", "2018-11-29 02:46:33.756818"], ["updated_at", "2018-11-29 02:46:33.756818"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.6ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Vietnam"], ["flag", "vn"], ["created_at", "2018-11-29 02:46:33.760498"], ["updated_at", "2018-11-29 02:46:33.760498"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.5ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.4ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Vanuatu"], ["flag", "vu"], ["created_at", "2018-11-29 02:46:33.765901"], ["updated_at", "2018-11-29 02:46:33.765901"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (0.5ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Samoa"], ["flag", "ws"], ["created_at", "2018-11-29 02:46:33.769940"], ["updated_at", "2018-11-29 02:46:33.769940"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[36mCountry Create (1.1ms)[0m  [1m[32mINSERT INTO "countries" ("name", "flag", "created_at", "updated_at") VALUES (?, ?, ?, ?)[0m  [["name", "Yemen"], ["flag", "ye"], ["created_at", "2018-11-29 02:46:33.774081"], ["updated_at", "2018-11-29 02:46:33.774081"]]
+  ↳ db/seeds.rb:4
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:4
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:228
+  [1m[36mUser Exists (0.4ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "bob@101.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:228
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "bob"], ["email", "bob@101.com"], ["password_digest", "$2a$10$xCegU/uXpgLUPRO8IDu2v.5sY2rIt3Ce42Ut8nfWak3hWtV5cs20a"], ["created_at", "2018-11-29 02:46:33.914090"], ["updated_at", "2018-11-29 02:46:33.914090"]]
+  ↳ db/seeds.rb:228
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:228
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:228
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "joe@101.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:228
+  [1m[36mUser Create (0.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "joe"], ["email", "joe@101.com"], ["password_digest", "$2a$10$437XZKgZiz8wwQdywj4cHOgRUuU.UcKTMlRiUzXtngOpSyCPDeYIu"], ["created_at", "2018-11-29 02:46:34.011972"], ["updated_at", "2018-11-29 02:46:34.011972"]]
+  ↳ db/seeds.rb:228
+  [1m[35m (8.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:228
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:228
+  [1m[36mUser Exists (0.3ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "sam@101.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:228
+  [1m[36mUser Create (0.4ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "sam"], ["email", "sam@101.com"], ["password_digest", "$2a$10$t7oYwX9lBV5ZTkG/Kz/ktO.VDQ4OYI4s1CqWvmVbQbOgMM6C8UHm6"], ["created_at", "2018-11-29 02:46:34.111955"], ["updated_at", "2018-11-29 02:46:34.111955"]]
+  ↳ db/seeds.rb:228
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:228
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:228
+  [1m[36mUser Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "users" WHERE LOWER("users"."email") = LOWER(?) LIMIT ?[0m  [["email", "ted@101.com"], ["LIMIT", 1]]
+  ↳ db/seeds.rb:228
+  [1m[36mUser Create (1.5ms)[0m  [1m[32mINSERT INTO "users" ("name", "email", "password_digest", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?)[0m  [["name", "ted"], ["email", "ted@101.com"], ["password_digest", "$2a$10$pCYqqAGnkPMyk1Fvamufue3Rm5ZsTYF/QgOdEmUufGrsJr47WqrA."], ["created_at", "2018-11-29 02:46:34.194421"], ["updated_at", "2018-11-29 02:46:34.194421"]]
+  ↳ db/seeds.rb:228
+  [1m[35m (1.1ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:228
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mTrail Create (0.4ms)[0m  [1m[32mINSERT INTO "trails" ("name", "image", "distance", "duration", "dangers", "difficulty", "user_id", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Angel’s Landing"], ["image", "angel_s_landing.jpg"], ["distance", 3], ["duration", 4], ["dangers", "This is a short hike that attracts a lot of people. The number of hikers can lead to traffic jams at the upper point. The route starts with a narrow sandstone ridge with steep drop-offs. During the final ascent is a steep stone staircase. The path is just wide enough for one person. If a hiker decides to pass, they’ll be scurried over the edge. Be careful when passing! The National Park Service states that at least 5 people have fallen to their death but it doesn’t include the number of people who have fallen and have been rescued."], ["difficulty", 2], ["user_id", 1], ["country_id", 210], ["created_at", "2018-11-29 02:46:34.260820"], ["updated_at", "2018-11-29 02:46:34.260820"]]
+  ↳ db/seeds.rb:236
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mTrail Create (0.5ms)[0m  [1m[32mINSERT INTO "trails" ("name", "image", "distance", "duration", "dangers", "difficulty", "user_id", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Bright Angel Trail"], ["image", "bright_angel_trail.jpg"], ["distance", 9], ["duration", 5], ["dangers", "This trail is not easy as many hikers think. The temperatures can reach 20 degrees hotter in the canyon than at the rim. They don’t bring enough water, fail to rest enough and start too late in the day. In addition, there have been so many injuries and near deaths that the National Park Service created a crew to help distressed hikers with heat stroke. The hike usually reaches temperatures of 110 degrees."], ["difficulty", 4], ["user_id", 1], ["country_id", 210], ["created_at", "2018-11-29 02:46:34.272909"], ["updated_at", "2018-11-29 02:46:34.272909"]]
+  ↳ db/seeds.rb:236
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 153], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mTrail Create (0.5ms)[0m  [1m[32mINSERT INTO "trails" ("name", "image", "distance", "duration", "dangers", "difficulty", "user_id", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Cascade Saddle"], ["image", "cascade_saddle.jpg"], ["distance", 10], ["duration", 48], ["dangers", "This hike might be famous for the Lord Of The Rings, however, it’s extremely dangerous. The views are amazing, however, there are many slippery rocks from the falls. The hike is through alpine meadows and beech forests."], ["difficulty", 5], ["user_id", 2], ["country_id", 153], ["created_at", "2018-11-29 02:46:34.284988"], ["updated_at", "2018-11-29 02:46:34.284988"]]
+  ↳ db/seeds.rb:236
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mTrail Create (0.6ms)[0m  [1m[32mINSERT INTO "trails" ("name", "image", "distance", "duration", "dangers", "difficulty", "user_id", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "El Caminito del Rey"], ["image", "el_caminito_del_rey.jpg"], ["distance", 2], ["duration", 2], ["dangers", "The two mile trail is built on a steel path over 100 years ago. The trail was originally constructed for works to maintain a hydroelectric plant. However, over time it opened up to the public to become one of the go to dangerous hiking trails for hiking enthusiasts."], ["difficulty", 3], ["user_id", 3], ["country_id", 58], ["created_at", "2018-11-29 02:46:34.301868"], ["updated_at", "2018-11-29 02:46:34.301868"]]
+  ↳ db/seeds.rb:236
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mTrail Create (0.5ms)[0m  [1m[32mINSERT INTO "trails" ("name", "image", "distance", "duration", "dangers", "difficulty", "user_id", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mount Hua Shan"], ["image", "mount_hua_shan.jpg"], ["distance", 8], ["duration", 7], ["dangers", "As history has reported, this mountain is home to pilgrims who climb to the temples at the summit. The trek contains vertical stairways, plank trails, and iron chains. Considered one of the most dangerous hikes in the world and at one point, the planks disappear and hikers must use small divots carved into the rocks to keep going."], ["difficulty", 5], ["user_id", 4], ["country_id", 41], ["created_at", "2018-11-29 02:46:34.321936"], ["updated_at", "2018-11-29 02:46:34.321936"]]
+  ↳ db/seeds.rb:236
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 159], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mTrail Create (0.4ms)[0m  [1m[32mINSERT INTO "trails" ("name", "image", "distance", "duration", "dangers", "difficulty", "user_id", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Mount Pinatubo"], ["image", "mount_pinatubo.jpg"], ["distance", 8], ["duration", 4], ["dangers", "More than 72 people fell victim to this hike up Mount Pinatubo’s crater lake. The last eruption was second largest recorded this century planting 15 million tons of sulfur gas onto the mountain. The hike is quite easy but the dangerous part is the volcano’s tendency to blow up again."], ["difficulty", 3], ["user_id", 2], ["country_id", 159], ["created_at", "2018-11-29 02:46:34.341344"], ["updated_at", "2018-11-29 02:46:34.341344"]]
+  ↳ db/seeds.rb:236
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mTrail Create (0.8ms)[0m  [1m[32mINSERT INTO "trails" ("name", "image", "distance", "duration", "dangers", "difficulty", "user_id", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "The Maze Canyonlands"], ["image", "the_maze_canyonlands.jpg"], ["distance", 6], ["duration", 4], ["dangers", "Located in the Canyonlands National Park and receives around 2,000 visitors per year. The red rock labyrinth known as the Maze is full of dead ends. It’s very prone to flash floods and dangerous rockfalls. The danger can not be over emphasized and visitors must use extreme caution, communication and extreme caution."], ["difficulty", 4], ["user_id", 3], ["country_id", 210], ["created_at", "2018-11-29 02:46:34.353721"], ["updated_at", "2018-11-29 02:46:34.353721"]]
+  ↳ db/seeds.rb:236
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 97], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mTrail Create (0.4ms)[0m  [1m[32mINSERT INTO "trails" ("name", "image", "distance", "duration", "dangers", "difficulty", "user_id", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Via Ferrata"], ["image", "via_ferrata.jpg"], ["distance", 5], ["duration", 5], ["dangers", "Via Ferrata (Italian for “iron way”) was scaled originally by the Europeans in the 15th century. The ladders and route was used back in World War 1 by troops. The hiking trail is well maintained with cables, ropes, wooden walkways, and suspension bridges. Your life depends on safety hinges snapping into a specialized carabiner setup (called a ferrata set). The dangerous parts of the hike include the rock faces and the tall ledges that you have to scale to complete the hike."], ["difficulty", 4], ["user_id", 4], ["country_id", 97], ["created_at", "2018-11-29 02:46:34.366982"], ["updated_at", "2018-11-29 02:46:34.366982"]]
+  ↳ db/seeds.rb:236
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mTrail Create (0.5ms)[0m  [1m[32mINSERT INTO "trails" ("name", "image", "distance", "duration", "dangers", "difficulty", "user_id", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "West Coast Trail"], ["image", "west_coast_trail.jpg"], ["distance", 47], ["duration", 168], ["dangers", "Despite a relatively low death rate compared to some of the other hikes on this list, the West Coast Trail’s long, almost vertical ladder sections make it a real thrill-seeker’s hiking trail. The terrain is consistently uneven.\nHikers should be equipped to wade through rivers, scramble across steep slopes and be prepared for slippery conditions throughout. Storms regularly damage the trails and structures, making them even more dangerous or often impassable. Oh, and did I mention that one may encounter the odd bear or cougar en route?"], ["difficulty", 5], ["user_id", 2], ["country_id", 35], ["created_at", "2018-11-29 02:46:34.381071"], ["updated_at", "2018-11-29 02:46:34.381071"]]
+  ↳ db/seeds.rb:236
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 158], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mTrail Create (0.5ms)[0m  [1m[32mINSERT INTO "trails" ("name", "image", "distance", "duration", "dangers", "difficulty", "user_id", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Kokoda Trail"], ["image", "kokoda_trail.jpg"], ["distance", 60], ["duration", 288], ["dangers", "The Kokoda Track has seen plenty of death in its time. In 1942, it was the scene of intense fighting between the Japanese and Australians. The route lay almost dormant until the past decade, when adventurous trekkers discovered the 60-mile slog connecting the outskirts of Port Moresby to the village of Kokoda.\nIn 2009, 13 people died in a plane crash en route to the trailhead, and four more hikers died on the trail, which takes up to 11 days to complete. They faced malaria, extreme heat, frigid nights, and daily bone-soaking afternoon rains. The route itself has been called a StairMaster in a steam room, with ankle-deep clay muck, slippery roots, and portions that become waterfalls. As you might expect, the death toll and the harsh conditions started to deter trekkers.\nSince the ill-fated 2009 season, the governments of Australia and Papua New Guinea have spent millions of dollars bringing more modern facilities to the trail. You still have to watch out for all the dangers listed above, but the wild route is changing rapidly.\n"], ["difficulty", 5], ["user_id", 3], ["country_id", 158], ["created_at", "2018-11-29 02:46:34.396914"], ["updated_at", "2018-11-29 02:46:34.396914"]]
+  ↳ db/seeds.rb:236
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 156], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mTrail Create (0.5ms)[0m  [1m[32mINSERT INTO "trails" ("name", "image", "distance", "duration", "dangers", "difficulty", "user_id", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Huayna Picchu Trail"], ["image", "huayna_picchu_trail.jpg"], ["distance", 1], ["duration", 2], ["dangers", "The Inca Trail to Machu Picchu can be a tough trek, and it takes a few casualties each year. But the real danger begins when you follow the trail past the mythical city and up Huayna Picchu, aka the “Hike of Death.” The old Inca staircase is carved out of granite and climbs about 1,000 feet in less than a mile. Plus, the route is full of rotting, crumbling rock, slippery stones, and exposed corners. Many people tackle the route totally unprepared—we’re talking flip-flops and no water.\nClouds and mist make the journey more difficult, and in some sections hikers must cling to old steel cables. Going up is the easy part. Coming down the steep slope often paralyzes travelers with fear. But it’s worth the pain—the view from Huayna Picchu on a sunny day is the best bird’s-eye view of Machu Picchu below."], ["difficulty", 2], ["user_id", 4], ["country_id", 156], ["created_at", "2018-11-29 02:46:34.412731"], ["updated_at", "2018-11-29 02:46:34.412731"]]
+  ↳ db/seeds.rb:236
+  [1m[35m (1.2ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ db/seeds.rb:236
+  [1m[36mTrail Create (0.5ms)[0m  [1m[32mINSERT INTO "trails" ("name", "image", "distance", "duration", "dangers", "difficulty", "user_id", "country_id", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?)[0m  [["name", "Pacaya Volcano"], ["image", "pacaya_volcano.jpg"], ["distance", 4], ["duration", 4], ["dangers", "Active volcanoes typically aren't top tourist attractions, but Guatemala's Pacaya, located near the capital city, is different. Pacaya became active again in 1965. Since then, eruptions have killed a handful of people. A 2010 eruption claimed three lives, and another eruption three years later sent lava flowing down one side of the mountain. Nearby villages were evacuated. Pacaya began spewing rocks, ash, and vapor again last March.\nThe climb can be dangerous even when the volcano isn't erupting. Hikers have made it to the top of the mountain's steep cinder cone, only to fall in thanks to the hot, crumbling ground.\nThe national park service closed the 8,000-foot peak to the public after the fatalities, but some stubborn trekkers are still reportedly accessing the volcano from nearby farms."], ["difficulty", 3], ["user_id", 1], ["country_id", 80], ["created_at", "2018-11-29 02:46:34.440534"], ["updated_at", "2018-11-29 02:46:34.440534"]]
+  ↳ db/seeds.rb:236
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:236
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:259
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:259
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:259
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "trail_id", "comment_owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "Carry as little as possible, but choose that little with care."], ["user_id", 1], ["trail_id", 2], ["comment_owner", "bob"], ["created_at", "2018-11-29 02:46:34.471417"], ["updated_at", "2018-11-29 02:46:34.471417"]]
+  ↳ db/seeds.rb:259
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:259
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:259
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:259
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:259
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "trail_id", "comment_owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "Make sure to bring lots of water! This trail is long and it gets really hot."], ["user_id", 2], ["trail_id", 2], ["comment_owner", "joe"], ["created_at", "2018-11-29 02:46:34.476819"], ["updated_at", "2018-11-29 02:46:34.476819"]]
+  ↳ db/seeds.rb:259
+  [1m[35m (0.8ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:259
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:259
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:259
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:259
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "trail_id", "comment_owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "There are several animals that inhabit the area around the Cascade Saddle trail, including cougars, black bears, beaver, foxes, falcons, porcupines and more!"], ["user_id", 1], ["trail_id", 3], ["comment_owner", "bob"], ["created_at", "2018-11-29 02:46:34.481622"], ["updated_at", "2018-11-29 02:46:34.481622"]]
+  ↳ db/seeds.rb:259
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:259
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:259
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:259
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:259
+  [1m[36mComment Create (0.4ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "trail_id", "comment_owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "The hike to the end point and back is under 5 miles round-trip and gains less than 200 feet of elevation, making it a pretty good trip for families with kids who can be coerced onto the trail."], ["user_id", 3], ["trail_id", 3], ["comment_owner", "sam"], ["created_at", "2018-11-29 02:46:34.487148"], ["updated_at", "2018-11-29 02:46:34.487148"]]
+  ↳ db/seeds.rb:259
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:259
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:259
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:259
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:259
+  [1m[36mComment Create (1.2ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "trail_id", "comment_owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "There's no view more dramatic than what you see hanging onto a chain bolted into a cliff."], ["user_id", 4], ["trail_id", 1], ["comment_owner", "ted"], ["created_at", "2018-11-29 02:46:34.494042"], ["updated_at", "2018-11-29 02:46:34.494042"]]
+  ↳ db/seeds.rb:259
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:259
+  [1m[35m (0.1ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:259
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ db/seeds.rb:259
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ db/seeds.rb:259
+  [1m[36mComment Create (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "trail_id", "comment_owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "The Cascade Saddle Route is an alpine crossing recommended for experienced trampers as a fine weather, summer route."], ["user_id", 4], ["trail_id", 3], ["comment_owner", "ted"], ["created_at", "2018-11-29 02:46:34.502267"], ["updated_at", "2018-11-29 02:46:34.502267"]]
+  ↳ db/seeds.rb:259
+  [1m[35m (1.0ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:259
+  [1m[35m (0.2ms)[0m  [1m[36mbegin transaction[0m
+  ↳ db/seeds.rb:259
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ db/seeds.rb:259
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ db/seeds.rb:259
+  [1m[36mComment Create (0.5ms)[0m  [1m[32mINSERT INTO "comments" ("content", "user_id", "trail_id", "comment_owner", "created_at", "updated_at") VALUES (?, ?, ?, ?, ?, ?)[0m  [["content", "The views of Zion Canyon's 270 million-year-old rock layers will time travel you back to the Triassic period when this section of the Colorado Plateau was a flat basin at sea level."], ["user_id", 2], ["trail_id", 1], ["comment_owner", "joe"], ["created_at", "2018-11-29 02:46:34.509049"], ["updated_at", "2018-11-29 02:46:34.509049"]]
+  ↳ db/seeds.rb:259
+  [1m[35m (0.9ms)[0m  [1m[36mcommit transaction[0m
+  ↳ db/seeds.rb:259
+Started GET "/users/1/trails/1" for ::1 at 2018-11-28 21:46:51 -0500
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  ↳ bin/rails:9
+Processing by TrailsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (1.0ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:86
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.8ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mTrail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (56.9ms)
+Completed 200 OK in 3422ms (Views: 3331.5ms | ActiveRecord: 5.2ms)
+
+
+Started GET "/users/1/trails/1.json" for ::1 at 2018-11-28 21:46:58 -0500
+Processing by TrailsController#show as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:86
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."trail_id" = ?[0m  [["trail_id", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers] Rendered TrailSerializer with ActiveModelSerializers::Adapter::Attributes (67.21ms)
+Completed 200 OK in 113ms (Views: 108.7ms | ActiveRecord: 1.1ms)
+
+
+Started GET "/users/1/trails/1.json" for ::1 at 2018-11-28 21:47:06 -0500
+Processing by TrailsController#show as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:86
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."trail_id" = ?[0m  [["trail_id", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers] Rendered TrailSerializer with ActiveModelSerializers::Adapter::Attributes (13.31ms)
+Completed 200 OK in 20ms (Views: 14.2ms | ActiveRecord: 1.0ms)
+
+
+Started GET "/users/1/trails/1.json" for ::1 at 2018-11-28 21:47:07 -0500
+Processing by TrailsController#show as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:86
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."trail_id" = ?[0m  [["trail_id", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers] Rendered TrailSerializer with ActiveModelSerializers::Adapter::Attributes (7.37ms)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/trails/1.json" for ::1 at 2018-11-28 21:47:09 -0500
+Processing by TrailsController#show as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:86
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."trail_id" = ?[0m  [["trail_id", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers] Rendered TrailSerializer with ActiveModelSerializers::Adapter::Attributes (7.09ms)
+Completed 200 OK in 10ms (Views: 7.5ms | ActiveRecord: 0.5ms)
+
+
+Started GET "/users/1/trails/1.json" for ::1 at 2018-11-28 21:47:10 -0500
+Processing by TrailsController#show as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:86
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mComment Load (0.1ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."trail_id" = ?[0m  [["trail_id", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers] Rendered TrailSerializer with ActiveModelSerializers::Adapter::Attributes (4.95ms)
+Completed 200 OK in 10ms (Views: 5.3ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/trails/1" for ::1 at 2018-11-28 21:47:16 -0500
+Processing by TrailsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (0.1ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:86
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mTrail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 870ms (Views: 865.4ms | ActiveRecord: 0.6ms)
+
+
+Started GET "/users/1/trails/1.json" for ::1 at 2018-11-28 21:47:19 -0500
+Processing by TrailsController#show as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:86
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mComment Load (0.3ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."trail_id" = ?[0m  [["trail_id", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers] Rendered TrailSerializer with ActiveModelSerializers::Adapter::Attributes (7.81ms)
+Completed 200 OK in 12ms (Views: 8.1ms | ActiveRecord: 1.2ms)
+
+
+Started GET "/" for ::1 at 2018-11-28 21:47:24 -0500
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering home/index.html.erb within layouts/application
+  [1m[36mTrail Load (0.8ms)[0m  [1m[34mSELECT "trails".* FROM "trails" ORDER BY created_at asc[0m
+  ↳ app/views/home/_root.html.erb:4
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCACHE Country Load (0.0ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 153], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.5ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 58], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.6ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 41], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 159], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCACHE Country Load (0.0ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 97], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 35], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 3], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.1ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 158], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 4], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 156], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:9
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 80], ["LIMIT", 1]]
+  ↳ app/views/home/_root.html.erb:17
+  Rendered home/_root.html.erb (36.0ms)
+  Rendered home/index.html.erb within layouts/application (42.1ms)
+Completed 200 OK in 387ms (Views: 378.8ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/users/1/trails/2" for ::1 at 2018-11-28 21:47:55 -0500
+Processing by TrailsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[36mTrail Load (1.9ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:86
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mTrail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (7.3ms)
+Completed 200 OK in 402ms (Views: 391.2ms | ActiveRecord: 2.6ms)
+
+
+Started GET "/users/1/trails/1.json" for ::1 at 2018-11-28 21:47:58 -0500
+Processing by TrailsController#show as JSON
+  Parameters: {"user_id"=>"1", "id"=>"1"}
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:86
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."trail_id" = ?[0m  [["trail_id", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers] Rendered TrailSerializer with ActiveModelSerializers::Adapter::Attributes (4.87ms)
+Completed 200 OK in 8ms (Views: 5.1ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/users/1/trails/2" for ::1 at 2018-11-28 21:48:03 -0500
+Processing by TrailsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:86
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mTrail Exists (0.1ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (8.0ms)
+Completed 200 OK in 409ms (Views: 402.7ms | ActiveRecord: 0.9ms)
+
+
+Started GET "/users/1/trails/2.json" for ::1 at 2018-11-28 21:48:05 -0500
+Processing by TrailsController#show as JSON
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:86
+  [1m[36mUser Load (0.2ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."trail_id" = ?[0m  [["trail_id", 2]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers] Rendered TrailSerializer with ActiveModelSerializers::Adapter::Attributes (5.29ms)
+Completed 200 OK in 8ms (Views: 5.5ms | ActiveRecord: 0.7ms)
+
+
+Started GET "/users/1/trails/2.json" for ::1 at 2018-11-28 21:48:08 -0500
+Processing by TrailsController#show as JSON
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[36mTrail Load (0.3ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:86
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mCountry Load (0.2ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mComment Load (0.2ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."trail_id" = ?[0m  [["trail_id", 2]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers] Rendered TrailSerializer with ActiveModelSerializers::Adapter::Attributes (9.21ms)
+Completed 200 OK in 20ms (Views: 9.5ms | ActiveRecord: 2.4ms)
+
+
+Started GET "/users/1/trails/2.json" for ::1 at 2018-11-28 21:48:13 -0500
+Processing by TrailsController#show as JSON
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:86
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+[active_model_serializers]   [1m[36mCACHE User Load (0.0ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mCountry Load (0.3ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers]   [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."trail_id" = ?[0m  [["trail_id", 2]]
+[active_model_serializers]   ↳ app/controllers/trails_controller.rb:16
+[active_model_serializers] Rendered TrailSerializer with ActiveModelSerializers::Adapter::Attributes (10.28ms)
+Completed 200 OK in 17ms (Views: 11.1ms | ActiveRecord: 1.4ms)
+
+
+Started GET "/users/1/trails/2" for ::1 at 2018-11-28 21:48:18 -0500
+Processing by TrailsController#show as HTML
+  Parameters: {"user_id"=>"1", "id"=>"2"}
+  [1m[36mTrail Load (0.2ms)[0m  [1m[34mSELECT  "trails".* FROM "trails" WHERE "trails"."id" = ? LIMIT ?[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/trails_controller.rb:86
+  [1m[36mUser Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/application_controller.rb:9
+  Rendering trails/show.html.erb within layouts/application
+  [1m[36mCountry Load (0.4ms)[0m  [1m[34mSELECT  "countries".* FROM "countries" WHERE "countries"."id" = ? LIMIT ?[0m  [["id", 210], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:7
+  [1m[36mTrail Exists (0.2ms)[0m  [1m[34mSELECT  1 AS one FROM "trails" WHERE "trails"."user_id" = ? AND "trails"."id" = ? LIMIT ?[0m  [["user_id", 1], ["id", 2], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:12
+  [1m[36mCACHE User Load (0.1ms)[0m  [1m[34mSELECT  "users".* FROM "users" WHERE "users"."id" = ? LIMIT ?[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/trails/show.html.erb:25
+  Rendered trails/show.html.erb within layouts/application (8.2ms)
+Completed 200 OK in 399ms (Views: 394.2ms | ActiveRecord: 1.1ms)
+
+
